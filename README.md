@@ -43,7 +43,7 @@ Python veya komut satırı gerekmez. Görüntüleme bileşeni eksikse kurulum Mi
 ## Veriler ve güncellemeler
 
 - Ortak şampiyon, görsel ve eşleşme verileri kurulumla gelir. Kişisel havuzun, maç kayıtların ve Riot anahtarın kendi bilgisayarında tutulur; bu depoya yüklenmez.
-- Yeni uygulama sürümleri açılışta kontrol edilir. Güncellemeyi indirmek ve yüklemek senin seçimine bağlıdır. Oyun ve şampiyon seçimi sırasında kurulum başlatılmaz.
+- Yeni uygulama sürümleri açılışta arka planda kontrol edilir; bulunan sürüm doğrulanarak otomatik indirilir ve yüklenir. Oyun, şampiyon seçimi veya devam eden veri işlemi varsa kurulum bitişini bekler. Güncellemeden sonra Keel yeniden açılır.
 - Kurulum ve güncellemeler hesap ayarlarını veya maç geçmişini silmez. Kullanıcı verileri program dosyalarından ayrı saklanır.
 - Uygulama sürümü ile oyun verisi ayrı yenilenir. Yama ve eşleşme kaynaklarını **Veri merkezi** üzerinden güncelleyebilirsin.
 
