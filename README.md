@@ -41,9 +41,9 @@ Aşağıdaki özelliklerin tamamını **Riot anahtarı eklemeden** kullanabilirs
 
 **Keel kapalıyken oynadığın maçlar da listelenir.** Maç geçmişim bölümündeki **Geçmişi yenile** düğmesi son 20 maçı getirir; daha eskileri 20’şer maç halinde, son 200 maç kapsamında yükleyebilirsin. Maç sonu skoru, eşyalar, hasar, görüş ve skora katkı bilgileri gösterilir. Varsa eşleşen Keel canlı analizi aynı karttan açılır. Bu özellik kendi Riot anahtarınla veya kapalı test davetiyle çalışır.
 
-**Maç kartında rakibini ve hazırlığını da gör.** Koridor rakibi, sihirdar büyüleri, anahtar rün ve ikincil rün yolu birlikte gösterilir. Bulut davetiyle 10 üzerinden AI puanı hazırlanır; “Neden?” ile kısa Türkçe gerekçesi açılır. Puan, rol ve maç sonu istatistiklerine dayalı yaklaşık bir yorumdur. Oyuncu adı, PUUID, maç kimliği ve Riot anahtarı modele gönderilmez. Puanlar saklanır; kapalı testte günlük değerlendirme sınırı vardır.
+**Maç kartında rakibini ve hazırlığını da gör.** Yeşil çerçevede oynadığın şampiyon, kırmızı çerçevede koridor rakibin yer alır. Yanlarında mod, koridor, tarih, skor, büyü ve rün ikonları, eşyalar ve AI puanı gösterilir. İkonların adlarına üzerlerine gelerek ulaşabilirsin. Bulut davetiyle 10 üzerinden AI puanı hazırlanır; “Neden?” ile kısa Türkçe gerekçesi açılır. Puan, rol ve maç sonu istatistiklerine dayalı yaklaşık bir yorumdur. Oyuncu adı, PUUID, maç kimliği ve Riot anahtarı modele gönderilmez. Puanlar saklanır; kapalı testte günlük değerlendirme sınırı vardır.
 
-<p align="center"><img src="docs/images/history-rating.webp" alt="Örnek verilerle Keel maç geçmişi: koridor rakibi, büyüler, rünler, eşyalar ve renkli AI puanı" width="1264" loading="lazy"></p>
+<p align="center"><img src="docs/images/history-row.webp" alt="Örnek verilerle Keel maç geçmişi: yeşil ve kırmızı şampiyon portreleri, VS, skor, büyüler, rünler, eşyalar ve AI puanı" width="1264" loading="lazy"></p>
 
 *Örnek geçmiş ekranı; gerçek hesabın verilerini içermez. Görseldeki puanlar yerleşimi göstermek için örnektir.*
 
