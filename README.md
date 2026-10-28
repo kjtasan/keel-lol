@@ -79,7 +79,7 @@ Anahtar yalnızca kişisel geçmişi almak ve yenilemek için kullanılır; bilg
 <details>
 <summary><strong>İlk sürümler ve kurulum hakkında</strong></summary>
 
-0.1.0 veya 0.1.1 kullanıyorsan otomatik kuruluma geçmek için son sürüme bir kez güncellemen gerekir. Sonraki uygulama güncellemelerini Keel yönetir.
+0.1.4 veya daha eski bir sürümde güncelleme denetimi “kontrol ediliyor” durumunda kalıyorsa [son kurulum dosyasını](https://github.com/kjtasan/keel-lol/releases/latest) bir kez indirip mevcut kurulumun üzerine yükle. 0.1.5, paketlenmiş uygulamadaki güvenli bağlantı dosyası eksikliğini düzeltir. Hesap ayarların ve maç kayıtların korunur; sonraki güncellemeleri Keel yönetir.
 
 Windows yayıncı sertifikası henüz eklenmemiştir. Resmî dağıtım adresi bu deponun [Releases](https://github.com/kjtasan/keel-lol/releases) bölümüdür. Keel’in güncelleme sistemi sürüm bilgisinin imzasını ve indirilen kurulum dosyasının bütünlüğünü kontrol eder.
 
