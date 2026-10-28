@@ -41,9 +41,11 @@ Aşağıdaki özelliklerin tamamını **Riot anahtarı eklemeden** kullanabilirs
 
 **Keel kapalıyken oynadığın maçlar da listelenir.** Maç geçmişim bölümündeki **Geçmişi yenile** düğmesi son 20 maçı getirir; daha eskileri 20’şer maç halinde, son 200 maç kapsamında yükleyebilirsin. Maç sonu skoru, eşyalar, hasar, görüş ve skora katkı bilgileri gösterilir. Varsa eşleşen Keel canlı analizi aynı karttan açılır. Bu özellik kendi Riot anahtarınla veya kapalı test davetiyle çalışır.
 
-<p align="center"><img src="docs/images/history.webp" alt="Örnek verilerle Keel maç geçmişi: Riot maç sonu skorları, eşyalar, mod filtresi ve bağlı canlı analiz" width="1264" loading="lazy"></p>
+**Maç kartında rakibini ve hazırlığını da gör.** Koridor rakibi, sihirdar büyüleri, anahtar rün ve ikincil rün yolu birlikte gösterilir. Bulut davetiyle 10 üzerinden AI puanı hazırlanır; “Neden?” ile kısa Türkçe gerekçesi açılır. Puan, rol ve maç sonu istatistiklerine dayalı yaklaşık bir yorumdur. Oyuncu adı, PUUID, maç kimliği ve Riot anahtarı modele gönderilmez. Puanlar saklanır; kapalı testte günlük değerlendirme sınırı vardır.
 
-*Örnek geçmiş ekranı; gerçek hesabın verilerini içermez.*
+<p align="center"><img src="docs/images/history-rating.webp" alt="Örnek verilerle Keel maç geçmişi: koridor rakibi, büyüler, rünler, eşyalar ve renkli AI puanı" width="1264" loading="lazy"></p>
+
+*Örnek geçmiş ekranı; gerçek hesabın verilerini içermez. Görseldeki puanlar yerleşimi göstermek için örnektir.*
 
 Eşya, rün ve sihirdar büyüsü adlarında **oyundaki Türkçe karşılıklar** kullanılır. Eşya kütüphanesi Sihirdar Vadisi kapsamına göre süzülür.
 
