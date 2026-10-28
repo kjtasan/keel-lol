@@ -33,9 +33,10 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 **Windows 10 (19041 ve sonrası) veya Windows 11 · 64 bit**
 
 1. [Son sürümün](https://github.com/kjtasan/keel-lol/releases/latest) kurulum dosyasını indirip çalıştır.
-2. Keel’i aç. League istemcisi açıksa oyun hesabın algılanır; sunucunu seçerek hesabını doğrula.
-3. **Hesabım → Riot anahtarı ayarları** bölümünden kendi Riot geliştirici anahtarını ekle. Anahtarı [Riot Developer Portal](https://developer.riotgames.com/) üzerinden alabilirsin. Riot şifren istenmez.
-4. Şampiyon havuzunu hazırla. League’de şampiyon seçimi başladığında ana sayfadan seçim ekranına otomatik geçilir.
+2. Keel’i ve League istemcisini aç. Şampiyon seçimi başladığında Keel ilgili ekrana otomatik geçer.
+3. Şampiyon önerilerini, rün ve eşya hazırlığını, kütüphaneyi ve yerel maç kaydını **Riot anahtarı eklemeden** kullan.
+
+**Kişisel maç geçmişi isteğe bağlıdır.** Geçmiş maçlarından şampiyon havuzunu çıkarmak istersen **Hesabım** bölümüne Riot ID’ni, sunucunu ve kendi [Riot geliştirici anahtarını](https://developer.riotgames.com/) ekleyebilirsin. Anahtar yalnızca bu geçmişi almak ve yenilemek için kullanılır; Riot şifren istenmez.
 
 Python veya komut satırı gerekmez. Görüntüleme bileşeni eksikse kurulum Microsoft WebView2’yi hazırlar; bu işlem için internet bağlantısı gerekir.
 
@@ -48,7 +49,7 @@ Python veya komut satırı gerekmez. Görüntüleme bileşeni eksikse kurulum Mi
 
 ## İlk sürüm hakkında
 
-Keel geliştirme aşamasındadır. Bu sürümde kişisel maç geçmişini almak için kendi Riot geliştirici anahtarını tanımlaman gerekir. Yeterli kişisel maç bulunmadığında genel verilerden seçenekler sunulur; veri eksikliği arayüzde belirtilir. Öneriler bir kazanma garantisi değildir.
+Keel geliştirme aşamasındadır. Genel öneriler için hesap bağlaman veya Riot anahtarı eklemen gerekmez. Kişisel havuzunu eklersen en az 5 maç oynadığın şampiyonlar da değerlendirmeye katılır. Veri eksikliği arayüzde belirtilir; öneriler bir kazanma garantisi değildir.
 
 Windows yayıncı sertifikası henüz eklenmemiştir. Dağıtım kaynağı bu deponun **Releases** bölümüdür; güncelleme sistemi sürüm bilgisinin imzasını ve indirilen dosyanın bütünlüğünü kontrol eder.
 
