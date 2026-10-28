@@ -26,7 +26,7 @@ Takımın ve karşı takım şampiyon seçtikçe Keel seçenekleri yeniden değe
 
 ## Maça hazırlan, sonrasında dönüp bak
 
-Aşağıdaki özelliklerin tamamını **Riot anahtarı eklemeden** kullanabilirsin.
+Aşağıdaki özelliklerin tamamını **Riot anahtarı eklemeden** kullanabilirsin. Doğrulanmış ortak rün ve eşya dizilimleri kurulumla hazır gelir; kişisel maç geçmişinin boş olması bu önerileri engellemez.
 
 | Bölüm | Ne işe yarar? |
 |---|---|
