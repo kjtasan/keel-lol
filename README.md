@@ -1,60 +1,94 @@
-<h1 align="center">keel.</h1>
-<p align="center">League of Legends için maç hazırlığı ve maç sonrası değerlendirme.</p>
-<p align="center"><a href="https://github.com/kjtasan/keel-lol/releases/latest"><strong>Windows için indir</strong></a> · <a href="https://github.com/kjtasan/keel-lol/releases">Sürüm notları</a> · <a href="https://github.com/kjtasan/keel-lol/issues">Sorun bildir</a></p>
+<p align="center">
+  <img src="docs/images/cover.svg" alt="keel. — Şampiyon seçimine hazırlan. Maçını değerlendir. Riot anahtarı olmadan başla." width="1280">
+</p>
 
-Keel, şampiyon havuzunu, takımını ve rakiplerini dikkate alarak seçim seçenekleri sunar; rün, eşya ve sihirdar büyülerini kısa bir maç planıyla bir araya getirir. Şampiyon kütüphanesinden eşleşmeleri inceleyebilir, kaydedilen maçlarında skor, görüş ve minyon gelişimini rolüne göre değerlendirebilirsin.
+<p align="center">
+  <a href="https://github.com/kjtasan/keel-lol/releases/latest"><img src="docs/images/download.svg" alt="Windows için Keel’i indir" width="246" height="48"></a>
+</p>
 
-![Keel ana sayfası](docs/images/home.webp)
+<p align="center">
+  <a href="#kurulum">Kurulum</a> · <a href="#riot-api-anahtarı-gerekli-mi">API anahtarı</a> · <a href="https://github.com/kjtasan/keel-lol/releases">Sürüm notları</a> · <a href="https://github.com/kjtasan/keel-lol/issues">Sorun bildir</a>
+</p>
 
-## Şampiyon seçiminde
+Keel, League of Legends’ta şampiyon seçiminden maç sonuna kadar kullanabileceğin bir masaüstü yardımcısıdır. Takımına ve rakiplerine göre şampiyon seçenekleri sunar; rün, eşya ve sihirdar büyülerini kısa bir maç planıyla gösterir. Kütüphaneden şampiyonları ve eşleşmeleri inceleyebilir, Keel açıkken kaydedilen maçlarını rolüne göre değerlendirebilirsin.
 
-Takım ve rakip seçimleri geldikçe seçenekler yeniden değerlendirilir. Keel, koridor rakibi netleştiğinde ilgili eşleşmeyi kullanır; rakip belirsizse geniş eşleşme kapsamı bulunan kör seçim adaylarını da değerlendirir. Önerinin gerekçesi ve yeterli verinin bulunmadığı noktalar kartlarda görünür.
+> **Riot API anahtarı zorunlu değil.** Şampiyon önerileri, rün ve eşya hazırlığı, kütüphane, sessiz mod, yerel maç kaydı ve ortak veri yenileme anahtarsız çalışır. Anahtar yalnızca geçmiş maçlarını Riot’tan alıp kişisel şampiyon havuzunu oluşturmak veya yenilemek istersen gerekir.
 
-![Örnek şampiyon seçimi ve önerilerin gerekçeleri](docs/images/draft.webp)
+## Seçimler değiştikçe öneriler de değişir
 
-## Hazırlık, kütüphane ve maç geçmişi
+Takımın ve karşı takım şampiyon seçtikçe Keel seçenekleri yeniden değerlendirir. Koridor rakibin netleştiğinde eşleşme verisini kullanır; henüz belli değilse kör seçim için uygun adayları değerlendirir. Her önerinin gerekçesini ve hangi noktalarda yeterli veri bulunmadığını görebilirsin.
 
-| Bölüm | Neler bulabilirsin? |
+<p align="center">
+  <img src="docs/images/draft.webp" alt="Keel şampiyon seçimi ekranı: iki takımın seçimleri, üç şampiyon önerisi ve önerilerin gerekçeleri" width="1264" loading="lazy">
+</p>
+
+*Örnek seçim ekranı. Öneriler rolüne, seçimlere ve mevcut veriye göre değişir.*
+
+## Maça hazırlan, sonrasında dönüp bak
+
+Aşağıdaki özelliklerin tamamını **Riot anahtarı eklemeden** kullanabilirsin.
+
+| Bölüm | Ne işe yarar? |
 |---|---|
-| Maç öncesi hazırlık | Kilitlediğin şampiyon için rün, sihirdar büyüsü, başlangıç eşyaları ve kısa maç planı. |
-| Şampiyon kütüphanesi | Yaygın roller, eşya ve rün seçenekleri, takım ikilileri ve rakip eşleşmeleri. |
-| Maç geçmişim | Keel açıkken kaydedilen maçlar, son görülen eşyalar, skor gelişimi ve rolüne göre değerlendirme. |
-| Sessiz mod | Oyun sırasında bildirim vermeden, maç öncesi hazırlığı ve genel önerileri açıp inceleme. |
-| Veri merkezi | Kullanılan kaynaklar, veri kapsamı ve yama yenileme durumu. |
+| **Şampiyon seçimi** | Rolünü, takımını ve rakiplerini dikkate alan seçenekler sunar. Seçim başlayınca ana sayfadan otomatik geçiş yapar. |
+| **Maç hazırlığı** | Kilitlediğin şampiyon için rün, eşya ve sihirdar büyüsü seçeneklerini kısa bir koridor planıyla gösterir. |
+| **Sessiz mod** | Oyun sırasında bildirimlerle bölmez. Hazırladığın planı ve eşya önerilerini açıp inceleyebilirsin. |
+| **Kütüphane** | Şampiyonların yaygın rollerini, dizilimlerini, takım arkadaşlarıyla uyumunu ve rakip eşleşmelerini bir araya getirir. |
+| **Maç geçmişim** | Keel açıkken kaydedilen maçlarda skor, görüş, minyon gelişimi ve son görülen eşyaları incelemeni sağlar. |
+| **Veri merkezi** | Kullanılan kaynakları ve veri kapsamını gösterir; yama ve ortak eşleşme verilerini yenileyebilirsin. |
 
-Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar kullanılır. Eşya kütüphanesi Sihirdar Vadisi kapsamına göre süzülür.
+Eşya, rün ve sihirdar büyüsü adlarında **oyundaki Türkçe karşılıklar** kullanılır. Eşya kütüphanesi Sihirdar Vadisi kapsamına göre süzülür.
 
-![Keel şampiyon kütüphanesi](docs/images/library.webp)
+<p align="center">
+  <img src="docs/images/library.webp" alt="Keel kütüphanesi: şampiyon görselleri, arama ve rün, eşya, ikili, rakip bölümleri" width="1264" loading="lazy">
+</p>
 
-*Görseller örnek hesap ve seçimlerle hazırlanmıştır. Öneriler mevcut maç verisine ve seçimlere göre değişir.*
+<details>
+<summary><strong>Ana sayfayı da incele</strong></summary>
+
+Ana sayfadan seçim ekranına, kütüphaneye, maç geçmişine ve veri merkezine geçebilirsin. League bağlantısı otomatik kurulur.
+
+![Keel ana sayfası ve bölüm bağlantıları](docs/images/home.webp)
+
+</details>
 
 ## Kurulum
 
 **Windows 10 (19041 ve sonrası) veya Windows 11 · 64 bit**
 
-1. [Son sürümün](https://github.com/kjtasan/keel-lol/releases/latest) kurulum dosyasını indirip çalıştır.
-2. Keel’i ve League istemcisini aç. Şampiyon seçimi başladığında Keel ilgili ekrana otomatik geçer.
-3. Şampiyon önerilerini, rün ve eşya hazırlığını, kütüphaneyi ve yerel maç kaydını **Riot anahtarı eklemeden** kullan.
+1. [Son sürümün kurulum dosyasını indir.](https://github.com/kjtasan/keel-lol/releases/latest)
+2. Kurulumu tamamla ve masaüstü kısayolundan Keel’i aç.
+3. League istemcisini aç. Şampiyon seçimi başlayınca Keel ilgili ekrana otomatik geçer.
 
-**Kişisel maç geçmişi isteğe bağlıdır.** Geçmiş maçlarından şampiyon havuzunu çıkarmak istersen **Hesabım** bölümüne Riot ID’ni, sunucunu ve kendi [Riot geliştirici anahtarını](https://developer.riotgames.com/) ekleyebilirsin. Anahtar yalnızca bu geçmişi almak ve yenilemek için kullanılır; Riot şifren istenmez.
+Başlamak için Riot anahtarı eklemen, Python kurman veya komut satırı kullanman gerekmez. Görüntüleme bileşeni eksikse kurulum Microsoft WebView2’yi internet üzerinden hazırlar.
 
-Python veya komut satırı gerekmez. Görüntüleme bileşeni eksikse kurulum Microsoft WebView2’yi hazırlar; bu işlem için internet bağlantısı gerekir.
+## Riot API anahtarı gerekli mi?
 
-## Veriler ve güncellemeler
+**Genel kullanım için hayır.** Anahtar eklemediğinde takım ve rakip seçimlerine göre ortak verilerden öneri almaya devam edersin. Keel açıkken oynadığın maçların yerel kaydı için de anahtar gerekmez.
 
-- Ortak şampiyon, görsel ve eşleşme verileri kurulumla gelir. Kişisel havuzun, maç kayıtların ve Riot anahtarın kendi bilgisayarında tutulur; bu depoya yüklenmez.
-- Yeni uygulama sürümleri açılışta arka planda kontrol edilir; bulunan sürüm doğrulanarak otomatik indirilir ve yüklenir. Oyun, şampiyon seçimi veya devam eden veri işlemi varsa kurulum bitişini bekler. Güncellemeden sonra Keel yeniden açılır.
-- Kurulum ve güncellemeler hesap ayarlarını veya maç geçmişini silmez. Kullanıcı verileri program dosyalarından ayrı saklanır.
-- Uygulama sürümü ile oyun verisi ayrı yenilenir. Yama ve eşleşme kaynaklarını **Veri merkezi** üzerinden güncelleyebilirsin.
+**Kişisel havuzunu eklemek istersen:** **Hesabım** bölümüne Riot ID’ni, sunucunu ve kendi [Riot geliştirici anahtarını](https://developer.riotgames.com/) ekleyebilirsin. Keel geçmiş maçlarını inceleyerek en az 5 maç oynadığın şampiyonları kişisel değerlendirmeye katar. Yeterli kişisel maç bulunmadığında genel verilerden yararlanır.
 
-## İlk sürüm hakkında
+Anahtar yalnızca kişisel geçmişi almak ve yenilemek için kullanılır; bilgisayarında saklanır. Riot hesabının şifresi istenmez.
 
-Keel geliştirme aşamasındadır. Genel öneriler için hesap bağlaman veya Riot anahtarı eklemen gerekmez. Kişisel havuzunu eklersen en az 5 maç oynadığın şampiyonlar da değerlendirmeye katılır. Veri eksikliği arayüzde belirtilir; öneriler bir kazanma garantisi değildir.
+## Güncellemeler ve verilerin
 
-Windows yayıncı sertifikası henüz eklenmemiştir. Dağıtım kaynağı bu deponun **Releases** bölümüdür; güncelleme sistemi sürüm bilgisinin imzasını ve indirilen dosyanın bütünlüğünü kontrol eder.
+- **Uygulama kendini günceller.** 0.1.2 ve sonrasında Keel açılışta yeni sürümü arka planda kontrol eder, doğrular ve otomatik indirir. Kurulumu oyun, şampiyon seçimi ve veri işlemleri bittikten sonra yapar; ardından yeniden açılır.
+- **Maç geçmişin korunur.** Kişisel havuzun, maç kayıtların ve ayarların program dosyalarından ayrı, kendi bilgisayarında tutulur. Yeni sürüm kurulurken silinmez.
+- **Ortak veriler kurulumla gelir.** Şampiyon, görsel ve eşleşme verilerini kullanmak için kendi maç arşivini toplaman gerekmez. Oyun verilerini ayrıca **Veri merkezi** üzerinden yenileyebilirsin.
 
-Bu depo Windows kurulumlarını, sürüm notlarını ve uygulama tanıtımını içerir. Kişisel veriler, ham maç arşivi ve özel yayın anahtarı dağıtıma dahil değildir.
+<details>
+<summary><strong>İlk sürümler ve kurulum hakkında</strong></summary>
+
+0.1.0 veya 0.1.1 kullanıyorsan otomatik kuruluma geçmek için son sürüme bir kez güncellemen gerekir. Sonraki uygulama güncellemelerini Keel yönetir.
+
+Windows yayıncı sertifikası henüz eklenmemiştir. Resmî dağıtım adresi bu deponun [Releases](https://github.com/kjtasan/keel-lol/releases) bölümüdür. Keel’in güncelleme sistemi sürüm bilgisinin imzasını ve indirilen kurulum dosyasının bütünlüğünü kontrol eder.
+
+</details>
 
 ---
+
+Keel geliştirme aşamasındadır. Öneriler mevcut veriye dayanır; kazanma garantisi vermez. Görseller örnek hesap ve seçimlerle hazırlanmıştır.
+
+Bu depo uygulama tanıtımını ve Windows kurulumlarını içerir. Kişisel veriler, Riot anahtarları ve ham maç arşivi yayımlanmaz.
 
 Keel, Riot Games tarafından desteklenmez veya onaylanmaz. League of Legends ve ilgili oyun görselleri Riot Games’e aittir.
