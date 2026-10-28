@@ -1,0 +1,83 @@
+name: Publish Windows release
+
+on:
+  push:
+    branches:
+      - 'distribution/v*'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Get verified distribution files
+        env:
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          SOURCE_BRANCH: ${{ github.ref_name }}
+        run: |
+          git clone --depth 1 --branch "$SOURCE_BRANCH" "https://github.com/$SOURCE_REPOSITORY.git" source
+
+      - name: Reassemble and verify installer
+        id: package
+        env:
+          SOURCE_BRANCH: ${{ github.ref_name }}
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,os,re,shutil
+          from pathlib import Path
+          branch=os.environ['SOURCE_BRANCH']
+          if not re.fullmatch(r'distribution/v\d+\.\d+\.\d+',branch):raise SystemExit('Unexpected release branch')
+          tag=branch.split('/')[-1]
+          folder=Path('source/.release-upload')/tag
+          envelope=json.loads((folder/'latest.json').read_text(encoding='utf-8'))
+          payload=envelope['payload']
+          version=payload['version']
+          if tag!='v'+version:raise SystemExit('Version mismatch')
+          output=Path('release');output.mkdir()
+          installer=output/('Keel-Setup-'+version+'.exe')
+          parts=sorted(folder.glob('part-*.bin'))
+          if not parts:raise SystemExit('No installer parts')
+          digest=hashlib.sha256();size=0
+          with installer.open('wb') as stream:
+              for part in parts:
+                  body=part.read_bytes();stream.write(body);digest.update(body);size+=len(body)
+          if digest.hexdigest()!=payload['sha256'] or size!=payload['size']:raise SystemExit('Installer verification failed')
+          expected='https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/releases/download/'+tag+'/'+installer.name
+          if payload['installer_url']!=expected:raise SystemExit('Release URL mismatch')
+          shutil.copyfile(folder/'latest.json',output/'latest.json')
+          (output/'notes.md').write_text(payload['notes'],encoding='utf-8')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('version='+version+'\nfilename='+installer.name+'\n')
+          print('Verified installer:',installer.name,'bytes:',size,'sha256:',digest.hexdigest())
+          PY
+
+      - name: Upload and publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_REPOSITORY: ${{ github.repository }}
+          RELEASE_VERSION: ${{ steps.package.outputs.version }}
+          INSTALLER_NAME: ${{ steps.package.outputs.filename }}
+        run: |
+          tag="v$RELEASE_VERSION"
+          if gh release view "$tag" --repo "$RELEASE_REPOSITORY" >/dev/null 2>&1; then
+            echo "This release already exists. Refusing to overwrite it."
+            exit 1
+          fi
+          target="$(gh api "repos/$RELEASE_REPOSITORY" --jq .default_branch)"
+          gh release create "$tag" "release/$INSTALLER_NAME" release/latest.json --repo "$RELEASE_REPOSITORY" --target "$target" --draft --title "Keel $RELEASE_VERSION" --notes-file release/notes.md
+          gh release edit "$tag" --repo "$RELEASE_REPOSITORY" --draft=false --latest
+
+      - name: Remove temporary upload branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_REPOSITORY: ${{ github.repository }}
+          SOURCE_BRANCH: ${{ github.ref_name }}
+        run: |
+          gh api --method DELETE "repos/$RELEASE_REPOSITORY/git/refs/heads/$SOURCE_BRANCH"
+
