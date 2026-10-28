@@ -10,9 +10,9 @@
   <a href="#kurulum">Kurulum</a> · <a href="#riot-api-anahtarı-gerekli-mi">API anahtarı</a> · <a href="https://github.com/kjtasan/keel-lol/releases">Sürüm notları</a> · <a href="https://github.com/kjtasan/keel-lol/issues">Sorun bildir</a>
 </p>
 
-Keel, League of Legends’ta şampiyon seçiminden maç sonuna kadar kullanabileceğin bir masaüstü yardımcısıdır. Takımına ve rakiplerine göre şampiyon seçenekleri sunar; rün, eşya ve sihirdar büyülerini kısa bir maç planıyla gösterir. Kütüphaneden şampiyonları ve eşleşmeleri inceleyebilir, Keel açıkken kaydedilen maçlarını rolüne göre değerlendirebilirsin.
+Keel, League of Legends’ta şampiyon seçiminden maç sonuna kadar kullanabileceğin bir masaüstü yardımcısıdır. Takımına ve rakiplerine göre şampiyon seçenekleri sunar; rün, eşya ve sihirdar büyülerini kısa bir maç planıyla gösterir. Kütüphaneden şampiyonları ve eşleşmeleri inceleyebilir, geçmiş maçlarının sonuçlarına bakabilir ve Keel açıkken kaydedilen maçlarını rolüne göre değerlendirebilirsin.
 
-> **Riot API anahtarı zorunlu değil.** Şampiyon önerileri, rün ve eşya hazırlığı, kütüphane, sessiz mod, yerel maç kaydı ve ortak veri yenileme anahtarsız çalışır. Anahtar yalnızca geçmiş maçlarını Riot’tan alıp kişisel şampiyon havuzunu oluşturmak veya yenilemek istersen gerekir.
+> **Riot API anahtarı zorunlu değil.** Şampiyon önerileri, rün ve eşya hazırlığı, kütüphane, sessiz mod, yerel maç kaydı ve ortak veri yenileme anahtarsız çalışır. Geçmiş maçlarını Riot’tan almak ve kişisel havuzunu yenilemek için kendi anahtarını veya kapalı test davetini kullanabilirsin.
 
 ## Seçimler değiştikçe öneriler de değişir
 
@@ -34,8 +34,16 @@ Aşağıdaki özelliklerin tamamını **Riot anahtarı eklemeden** kullanabilirs
 | **Maç hazırlığı** | Kilitlediğin şampiyon için rün, eşya ve sihirdar büyüsü seçeneklerini kısa bir koridor planıyla gösterir. |
 | **Sessiz mod** | Oyun sırasında bildirimlerle bölmez. Hazırladığın planı ve eşya önerilerini açıp inceleyebilirsin. |
 | **Kütüphane** | Şampiyonların yaygın rollerini, dizilimlerini, takım arkadaşlarıyla uyumunu ve rakip eşleşmelerini bir araya getirir. |
-| **Maç geçmişim** | Kaydedilen maçlarda rolüne göre öne çıkanları, gözden geçirilecek noktaları ve sonraki maç için en fazla iki somut hedefi gösterir. Skor, görüş, minyon ve eşya kayıtlarını ayrıca inceleyebilirsin. |
+| **Yerel maç analizi** | Keel açıkken kaydedilen maçlarda rolüne göre öne çıkanları, gözden geçirilecek noktaları ve sonraki maç için en fazla iki somut hedefi gösterir. Skor, görüş, minyon ve eşya kayıtlarını ayrıca inceleyebilirsin. |
 | **Veri merkezi** | Kullanılan kaynakları ve veri kapsamını gösterir; yama ve ortak eşleşme verilerini yenileyebilirsin. |
+
+
+
+**Keel kapalıyken oynadığın maçlar da listelenir.** Maç geçmişim bölümündeki **Geçmişi yenile** düğmesi son 20 maçı getirir; daha eskileri 20’şer maç halinde, son 200 maç kapsamında yükleyebilirsin. Maç sonu skoru, eşyalar, hasar, görüş ve skora katkı bilgileri gösterilir. Varsa eşleşen Keel canlı analizi aynı karttan açılır. Bu özellik kendi Riot anahtarınla veya kapalı test davetiyle çalışır.
+
+<p align="center"><img src="docs/images/history.webp" alt="Örnek verilerle Keel maç geçmişi: Riot maç sonu skorları, eşyalar, mod filtresi ve bağlı canlı analiz" width="1264" loading="lazy"></p>
+
+*Örnek geçmiş ekranı; gerçek hesabın verilerini içermez.*
 
 Eşya, rün ve sihirdar büyüsü adlarında **oyundaki Türkçe karşılıklar** kullanılır. Eşya kütüphanesi Sihirdar Vadisi kapsamına göre süzülür.
 
@@ -68,7 +76,9 @@ Başlamak için Riot anahtarı eklemen, Python kurman veya komut satırı kullan
 
 **Kişisel havuzunu eklemek istersen:** **Hesabım** bölümüne Riot ID’ni, sunucunu ve kendi [Riot geliştirici anahtarını](https://developer.riotgames.com/) ekleyebilirsin. Keel geçmiş maçlarını inceleyerek en az 5 maç oynadığın şampiyonları kişisel değerlendirmeye katar. Yeterli kişisel maç bulunmadığında genel verilerden yararlanır.
 
-Anahtar yalnızca kişisel geçmişi almak ve yenilemek için kullanılır; bilgisayarında saklanır. Riot hesabının şifresi istenmez.
+**Kapalı test davetin varsa:** Hesabım → Kapalı test · Bulut bağlantısı alanına hizmet adresini ve kişiye özel davet kodunu ekleyebilirsin. Ortak Personal API Key hizmeti yalnızca küçük, davetli özel test grubu içindir; herkese açık erişim sunmaz.
+
+Kendi Riot anahtarını girersen anahtar bilgisayarında saklanır. Davetli bulut bağlantısında ortak anahtar hizmette gizli tutulur ve kullanıcılara verilmez; maç verileri hizmet üzerinden alınır, indirilen geçmiş bilgisayarında saklanır. Riot hesabının şifresi istenmez.
 
 ## Güncellemeler ve verilerin
 
