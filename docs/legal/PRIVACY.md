@@ -6,7 +6,7 @@ Bu sayfa, uygulamanın hangi veriyi nerede kullandığını açıklar. **Tamamla
 ## Kısaca: veriler geliştiriciye mi gönderiliyor?
 Keel, bilgisayarındaki kişisel maç arşivini geliştiriciye e-posta, Discord mesajı veya otomatik bir kullanıcı raporu olarak göndermez. Yerel maç kayıtları ve ayrıntılı analiz bilgisayarında tutulur. Destek için kendin gönderdiğin mesaj, ekran görüntüsü veya dosyalar ise seçtiğin iletişim kanalından geliştiriciye ulaşır.
 
-**Bu, uygulamanın hiç veri işlemediği veya bulutta hiç kayıt bulunmadığı anlamına gelmez.** Davetli bulut bağlantısını kullandığında hesap/maç sorguları Keel'in Cloudflare üzerinde işlettiği hizmetten geçer; AI puanı için seçilmiş oyun istatistikleri hizmete iletilir. Kota/davet kayıtları ve AI sonuç önbelleği aşağıda açıklanan biçimde saklanır. Bu hizmetin yönetimi geliştiricidedir; hizmetteki kayıtların geliştiricinin erişemeyeceği kayıtlar olduğu iddia edilmez. Otomatik bir raporun geliştiricinin bilgisayarına gelmemesi ile bulutta veri işlenmesi farklı durumlardır.
+**Bu, uygulamanın hiç veri işlemediği veya bulutta hiç kayıt bulunmadığı anlamına gelmez.** Davetli bulut bağlantısını kullandığında hesap/maç sorguları Keel'in Cloudflare üzerinde işlettiği hizmetten geçer; isteğe bağlı AI yorumu için seçilmiş oyun istatistikleri hizmete iletilir. Kota/davet kayıtları ve AI sonuç önbelleği aşağıda açıklanan biçimde saklanır. Bu hizmetin yönetimi geliştiricidedir; hizmetteki kayıtların geliştiricinin erişemeyeceği kayıtlar olduğu iddia edilmez. Otomatik bir raporun geliştiricinin bilgisayarına gelmemesi ile bulutta veri işlenmesi farklı durumlardır.
 
 ## Hangi veri nereye gider?
 | İşlem | Bilgisayarında kalanlar | Hizmete iletilen / hizmette işlenenler |
@@ -14,7 +14,7 @@ Keel, bilgisayarındaki kişisel maç arşivini geliştiriciye e-posta, Discord 
 | Hesap ve ayarlar | Riot ID, sunucu, hesap/maç kimlikleri, kişisel havuz ve tercihler yerel kayıtlarda tutulur. Kendi Riot API anahtarın ve bulut davet kodun da yerel ayar dosyalarında saklanır. | Kendi Riot anahtarını kullanırken hesap/maç sorguları Riot'a gider. Davetli bulut bağlantısında sorgular Cloudflare Workers üzerinden Riot'a iletilir. |
 | Maç geçmişi | İndirilen Riot maç yanıtları, maç kimlikleri, geçmiş listesi ve eşleşen yerel kayıtlar bilgisayarında saklanır. | Bulut kullanılırsa Riot ID, PUUID, maç kimliği, bölge ve gereken sorgu parametreleri hizmet tarafından işlenir. Riot yanıtları maçtaki diğer katılımcıların kimlik ve istatistiklerini de içerebilir. |
 | Yerel canlı kayıt ve ayrıntılı analiz | Keel açıkken gözlenen skor, minyon, görüş, eşya ve zaman kayıtları ile yerel analiz bilgisayarında tutulur. | Yerel ayrıntılı raporu açmak, bu kayıtları AI modeline gönderen bir işlem değildir. |
-| AI performans puanı | Dönen puan ve kısa gerekçe, ilgili yerel maç kaydıyla önbelleğe alınır. | Şampiyon, rol, mod, süre, sonuç, skor, hasar, altın, minyon, görüş, totem ve skora katkı gibi izinli istatistikler Cloudflare'deki değerlendirme hizmetine gönderilir. Model Cloudflare Workers AI üzerinden çalışır. |
+| İsteğe bağlı AI yorumu | Dönen değerlendirme, ilgili yerel maç kaydıyla önbelleğe alınır. Eski AI yanıtlarının puan alanları da saklanabilir; bunlar güncel karttaki yerel maç puanı değildir. | Şampiyon, rol, mod, süre, sonuç, skor, hasar, altın, minyon, görüş, totem ve skora katkı gibi izinli istatistikler Cloudflare'deki değerlendirme hizmetine gönderilir. Model Cloudflare Workers AI üzerinden çalışır. |
 | Güncellemeler ve ortak oyun verileri | İndirilen güncelleme ve ortak veriler yerelde saklanır. | GitHub ve oyun verisi sağlayıcılarına indirme istekleri yapılır. Bu indirme isteklerinin gövdesine kişisel maç arşivi veya Riot anahtarı eklenmez. |
 
 Riot hesabının parolası istenmez. Ortak bulut Riot anahtarı Cloudflare secret olarak hizmette tutulur; masaüstü kurulumuna ve bu depoya eklenmez. Davet kodu, bulut isteklerinde HTTPS üzerinden yetkilendirme için kullanılır.
@@ -22,7 +22,7 @@ Riot hesabının parolası istenmez. Ortak bulut Riot anahtarı Cloudflare secre
 ## AI modeline ne gönderilmez?
 Değerlendirme girişinde oyuncu adı/Riot ID, PUUID, maç kimliği, Riot API anahtarı ve davet kodu modelin istemine eklenmez. Bulut hizmeti daveti doğrular; model yalnızca izinli oyun istatistikleriyle değerlendirme yapar. Bunları **doğrudan hesap kimliği çıkarılmış istatistikler** olarak tanımlıyoruz; hiçbir koşulda yeniden ilişkilendirilemeyecekleri iddia edilmiyor.
 
-Destek değerlendirmesinde minyon ve altın; ARAM değerlendirmesinde görüş/totem ölçütleri modele verilen özelliklerden çıkarılır. AI puanı ile yerel ayrıntılı maç raporu ayrı özelliklerdir.
+Destek değerlendirmesinde minyon ve altın; ARAM değerlendirmesinde görüş/totem ölçütleri modele verilen özelliklerden çıkarılır. Karttaki maç puanı ve ayrıntılı rapor bilgisayarında hazırlanır; bunları açmak model çağrısı yapmaz. İsteğe bağlı bulut AI yorumu ayrı bir özelliktir.
 
 ## Saklama süreleri ve önbellek
 - **Bilgisayarındaki veriler:** Maç geçmişi, kişisel kayıtlar, yerel AI sonuçları ve ayarlar kullanıcı tarafından yönetilir. Genel bir otomatik silme süresi yoktur; uygulamayı kaldırmak kişisel veri klasörünü otomatik temizlemez.

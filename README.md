@@ -1,75 +1,64 @@
 <p align="center">
-
-  <img src="docs/images/cover.svg?v=2" alt="keel. — Şampiyon seçimine hazırlan. Maçını değerlendir." width="1280">
-
+  <img src="docs/images/cover.svg?v=3" alt="keel. — League of Legends için şampiyon önerileri ve maç analizi." width="1280">
 </p>
 
 <p align="center">
-
   <a href="https://github.com/kjtasan/keel-lol/releases/latest"><img src="docs/images/download.svg" alt="Windows için Keel’i indir" width="246" height="48"></a>
-
 </p>
 
 <p align="center">
-
   <a href="#kurulum">Kurulum</a> · <a href="#hesap-ekleme-ve-bulut-bağlantısı">Hesaplar</a> · <a href="https://github.com/kjtasan/keel-lol/releases">Sürüm notları</a> · <a href="https://github.com/kjtasan/keel-lol/issues">Sorun bildir</a>
-
 </p>
 
-Keel, League of Legends için bir Windows yardımcısıdır. Takımına ve rakiplerine göre şampiyon seçeneklerini karşılaştır, rün ve eşyalarını hazırla. Maçtan sonra katkını incele, geçmişinle karşılaştır ve sonraki maç için somut hedefler belirle.
+Keel, League of Legends için şampiyon önerileri, maç hazırlığı ve performans analizi sunan bir Windows uygulamasıdır. Takımını ve rakibini dikkate alan seçenekleri karşılaştırabilir, rün ve eşyalarını hazırlayabilir, maçtan sonra katkını ve gelişimini inceleyebilirsin.
 
-## Seçimler değiştikçe öneriler de değişir
+## Her şey tek yerde
 
-Takımın ve karşı takım şampiyon seçtikçe Keel seçenekleri yeniden değerlendirir. Koridor rakibin netleştiğinde eşleşme verisini kullanır; henüz belli değilse kör seçim için uygun adayları değerlendirir. Her önerinin gerekçesini ve hangi noktalarda yeterli veri bulunmadığını görebilirsin.
+Ana sayfadan şampiyon seçimine, kişisel havuzuna, maç geçmişine ve kütüphaneye ulaş. League istemcisiyle bağlantı otomatik kurulur; seçim başlayınca ilgili ekran açılır.
 
-<p align="center">
+<p align="center"><img src="docs/images/home-016.webp" alt="Keel ana sayfası: DWG Jhin görseli, şampiyon seçimi ve bölüm bağlantıları" width="1440" loading="lazy"></p>
 
-  <img src="docs/images/draft.webp" alt="Keel şampiyon seçimi ekranı: iki takımın seçimleri, üç şampiyon önerisi ve önerilerin gerekçeleri" width="1264" loading="lazy">
+*Güncel ana sayfa; sol alttaki hesap bilgisi temsili olarak gösterilmiştir.*
 
-</p>
+## Takımına ve rakibine göre altı seçenek
 
-*Örnek seçim ekranı. Öneriler rolüne, seçimlere ve mevcut veriye göre değişir.*
+En iyi seçenek öne çıkar; diğer beş öneriyi aynı ekranda karşılaştırabilirsin. İki takımın seçimleri ve yasakları yanlarda yer alır. Koridor rakibi belli olduğunda eşleşme oranı, yeterli veri bulunduğunda takım arkadaşlarınla ikili sonuçlar gösterilir.
 
-## Maça hazırlan, sonrasında dönüp bak
+Sıralama yalnız en yüksek yüzdeyi seçmez. Eşleşme oranı, takım uyumu ve örnek desteği birlikte değerlendirilir; yakın oranlarda daha güçlü takım uyumu öne geçebilir. **3/4** gibi gösterimler, seçilmiş dört takım arkadaşından kaçının ikili verisinin bulunduğunu belirtir. Eksik veriden uyum veya oran üretilmez.
 
-Ortak şampiyon, rün ve eşya verileri kurulumla hazır gelir. Maç analizi, yerel kayıtların veya indirdiğin maç verileriyle hazırlanır; ayrıntılı raporu açmak ek AI kotası kullanmaz. Kişisel geçmiş ve AI puanı için gereken bağlantıyı [hesaplar bölümünde](#hesap-ekleme-ve-bulut-bağlantısı) bulabilirsin.
+<p align="center"><img src="docs/images/draft-016.webp" alt="Temsili yeni seçim ekranı: ortada altı öneri, Ahri karşısında kazanma oranları, Leona ve diğer takım arkadaşlarıyla ikili uyum, iki yanda takımlar ve yasaklar" width="1440" loading="lazy"></p>
+
+*Temsili seçim ekranı. Bu görseldeki oranlar, örnek sayıları ve sıralama arayüzü tanıtmak içindir; gerçek veya güncel eşleşme istatistiği olarak kullanılmamalıdır. İkili oranları tüm takımın kazanma ihtimali değildir.*
+
+## Maçtaki katkını gör
+
+Maç geçmişi; şampiyonunu, koridor rakibini, skorunu, rünlerini ve eşyalarını bir araya getirir. **Maç puanı**, rol ve moda göre uygun maç sonu ölçümlerinden bilgisayarında hesaplanır. Yalnız KDA’ya veya galibiyete dayanmaz; yeterli veri yoksa puan verilmez. **Neden?** ile gerekçeyi, **Maç analizi** ile katkılarını, karşılaştırmaları ve sonraki maç için somut hedefleri açabilirsin.
+
+<p align="center"><img src="docs/images/history-016.webp" alt="Temsili maç geçmişi: Ahri ile 14/2/11 ve 8,9 puanlık güçlü performans, Yasuo ile 3/11/4 ve 3,4 puanlık düşük performans" width="1440" loading="lazy"></p>
+
+*İki maç da temsili verilerle hazırlanmıştır; gerçek bir hesabın geçmişi değildir. 8,9 ve 3,4 puanları, örnek istatistiklerden uygulamanın mevcut yerel yöntemiyle hesaplanmıştır. Puanlar oyun içindeki her kararı ölçmez.*
+
+**Keel kapalıyken oynadığın maçlar da getirilebilir.** Geçmişi yenile düğmesi son 20 maçı getirir; daha eski maçlar 20’şer, son 200 maç kapsamında yüklenebilir. Onaylanmış bulut erişimi veya gelişmiş ayarlardaki kendi Riot anahtarın gerekir. Ayrıntılı yerel rapor ek AI kotası kullanmaz. İsteğe bağlı **AI yorumları** bulutta hazırlanır ve günlük kota kullanır; karttaki yerel maç puanından ayrıdır.
 
 | Bölüm | Ne işe yarar? |
 |---|---|
-| **Şampiyon seçimi** | Rolünü, takımını ve rakiplerini dikkate alan seçenekler sunar. Seçim başlayınca ana sayfadan otomatik geçiş yapar. |
-| **Maç hazırlığı** | Kilitlediğin şampiyon için rün, eşya ve sihirdar büyüsü seçeneklerini kısa bir koridor planıyla gösterir. |
-| **Sessiz mod** | Oyun sırasında bildirimlerle bölmez. Hazırladığın planı ve eşya önerilerini açıp inceleyebilirsin. |
-| **Kütüphane** | Şampiyonların yaygın rollerini, dizilimlerini, takım arkadaşlarıyla uyumunu ve rakip eşleşmelerini bir araya getirir. |
-| **Maç analizi** | Maçtaki katkını, inceleyebileceğin noktaları ve sonraki maç için en fazla iki somut hedefi gösterir. Uygun geçmiş maçlarınla karşılaştırır; varsa canlı kaydınla gelişimini tamamlar. |
-| **Veri merkezi** | Kullanılan kaynakları ve veri kapsamını gösterir; yama ve ortak eşleşme verilerini yenileyebilirsin. |
-
-**Keel kapalıyken oynadığın maçlar da listelenir.** Maç geçmişim bölümündeki **Geçmişi yenile** düğmesi son 20 maçı getirir; daha eskileri 20’şer maç halinde, son 200 maç kapsamında yükleyebilirsin. Maç sonu skoru, eşyalar, hasar, görüş ve skora katkı bilgileri gösterilir. Varsa eşleşen Keel canlı analizi aynı karttan açılır. Bu özellik onaylanmış bulut erişimiyle veya gelişmiş ayarlardaki kendi Riot anahtarınla çalışır.
-
-**Maç kartında rakibini ve hazırlığını da gör.** Yeşil çerçevede oynadığın şampiyon, kırmızı çerçevede koridor rakibin yer alır. Yanlarında mod, koridor, tarih, skor, büyü ve rün ikonları, eşyalar ve AI puanı gösterilir. İkonların adlarına üzerlerine gelerek ulaşabilirsin. Bulut erişimiyle 10 üzerinden AI puanı hazırlanır; “Neden?” ile kısa Türkçe gerekçesi açılır. Puan, rol ve maç sonu istatistiklerine dayalı yaklaşık bir yorumdur. Oyuncu adı, PUUID, maç kimliği ve Riot anahtarı modele gönderilmez. Puanlar saklanır; kapalı testte günlük değerlendirme sınırı vardır.
-
-<p align="center"><img src="docs/images/history-row.webp" alt="Örnek verilerle Keel maç geçmişi: yeşil ve kırmızı şampiyon portreleri, VS, skor, büyüler, rünler, eşyalar ve AI puanı" width="1264" loading="lazy"></p>
-
-*Örnek geçmiş ekranı; gerçek hesabın verilerini içermez. Görseldeki puanlar yerleşimi göstermek için örnektir.*
-
-Eşya, rün ve sihirdar büyüsü adlarında **oyundaki Türkçe karşılıklar** kullanılır. Eşya kütüphanesi Sihirdar Vadisi kapsamına göre süzülür.
-
-<p align="center">
-
-  <img src="docs/images/library.webp" alt="Keel kütüphanesi: şampiyon görselleri, arama ve rün, eşya, ikili, rakip bölümleri" width="1264" loading="lazy">
-
-</p>
+| **Şampiyon seçimi** | Rolüne, takımına ve rakibine göre altı seçeneği karşılaştırır. |
+| **Maç hazırlığı** | Kilitlediğin şampiyon için rün, eşya, büyü ve dört bölümden oluşan kısa oyun planını gösterir. |
+| **Sessiz mod** | Maç sırasında bildirimlerle bölmez; hazırladığın planı açıp inceleyebilirsin. |
+| **Maç analizi** | Maçtaki katkını ve geliştirebileceğin noktaları gösterir; uygun geçmiş maçlarınla karşılaştırır. Akış analizi için geçerli canlı kayıt gerekir. |
+| **Kütüphane** | Şampiyonları, dizilimleri, ikili sonuçları ve rakip eşleşmelerini bir araya getirir. |
+| **Veri merkezi** | Kaynakları, yama bilgisini ve veri kapsamını gösterir; ortak verileri yeniler. |
 
 <details>
+<summary><strong>Kütüphaneyi incele</strong></summary>
 
-<summary><strong>Ana sayfayı da incele</strong></summary>
+Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar kullanılır. Ortak şampiyon, dizilim ve görsel verileri kurulumla hazır gelir.
 
-Ana sayfadan seçim ekranına, kütüphaneye, maç geçmişine ve veri merkezine geçebilirsin. League bağlantısı otomatik kurulur.
-
-![Keel’in DWG Jhin görselli ana sayfası ve bölüm bağlantıları](docs/images/home-current.png)
+![Keel şampiyon kütüphanesi](docs/images/library.webp)
 
 </details>
 
-> **0.1.15 ile yenilendi:** Çoklu hesap, otomatik hesap/havuz geçişi, oyun içi profil simgesi, League rol simgeleri ve seçim sekmesinde yeşil parlama. [Sürüm notları.](https://github.com/kjtasan/keel-lol/releases/tag/v0.1.15)
+> **0.1.16:** Altı öneri, takım uyumu, maça özel plan ve daha ayrıntılı maç değerlendirmesi. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v0.1.16).
 
 ## Kurulum
 
@@ -84,18 +73,18 @@ Ana sayfadan seçim ekranına, kütüphaneye, maç geçmişine ve veri merkezine
 Keel'in Windows yayıncı sertifikası henüz yoktur; bu yüzden SmartScreen uygulamayı tanımadığına dair uyarı gösterebilir. [Microsoft'un SmartScreen açıklaması](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
 
 <details>
-<summary><strong>0.1.15 kurucusunun SHA-256 değerini denetle</strong></summary>
+<summary><strong>0.1.16 kurucusunun SHA-256 değerini denetle</strong></summary>
 
-Dosya: `Keel-Setup-0.1.15.exe`
+Dosya: `Keel-Setup-0.1.16.exe`
 
 ```text
-9276b9f27ca3d73c85bf098706932bd438f8328a04a7f286f02da77a98e26750
+9c29f1aad8cb53623d95d7121493907e489a6e327cec2543b0393a7434a1a459
 ```
 
 PowerShell'de kurucunun bulunduğu klasörden:
 
 ```powershell
-Get-FileHash .\Keel-Setup-0.1.15.exe -Algorithm SHA256
+Get-FileHash .\Keel-Setup-0.1.16.exe -Algorithm SHA256
 ```
 
 Çıktıdaki özet yukarıdakiyle eşleşmelidir. Diğer sürümlerde o sürümün notlarındaki değeri veya `SHA256SUMS.txt` dosyasını kullan. Özet kontrolü, dosyanın yayımlanan kopyayla aynı olduğunu gösterir; Windows yayıncı imzasının yerine geçmez.
@@ -150,7 +139,7 @@ Destek, gizlilik ve kullanım izni soruları için **Discord: `kjtasan`** (özel
 
 ## Son sürümün kapsamı
 
-0.1.15 hesap yönetimi, otomatik bağlantı ve arayüzü yeniler. Şampiyon önerilerini sıralama yöntemi ve ortak oyun verileri bu sürümde değiştirilmedi. [Kısa sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v0.1.15).
+0.1.16, altı önerili şampiyon seçimini, takım arkadaşı başına uyum değerlendirmesini, maça özel planı ve yerel maç puanını getirir. [Kısa sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v0.1.16).
 
 ---
 
