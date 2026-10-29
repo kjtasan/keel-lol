@@ -58,7 +58,7 @@ Eşya, rün ve sihirdar büyüsü adlarında **oyundaki Türkçe karşılıklar*
 
 Ana sayfadan seçim ekranına, kütüphaneye, maç geçmişine ve veri merkezine geçebilirsin. League bağlantısı otomatik kurulur.
 
-![Keel ana sayfası ve bölüm bağlantıları](docs/images/home.webp)
+![Keel’in Ahri görselli güncel ana sayfası ve bölüm bağlantıları](docs/images/home-current.webp)
 
 </details>
 
