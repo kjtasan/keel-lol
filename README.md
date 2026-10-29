@@ -62,7 +62,7 @@ Ana sayfadan seçim ekranına, kütüphaneye, maç geçmişine ve veri merkezine
 
 </details>
 
-> **0.1.13 ile yenilendi:** Logoyla başlayan açılış, Keel’e özel başlık çubuğu, uyumlu kaydırma çubuğu ve sadeleştirilmiş ana sayfa. [Sürüm notlarını incele.](https://github.com/kjtasan/keel-lol/releases/tag/v0.1.13)
+> **0.1.14 ile yenilendi:** Daha hızlı logo açılışı, düzeltilen başlangıç odağı ve dar pencerelerde düzgün kalan bölüm kartları. [Sürüm notlarını incele.](https://github.com/kjtasan/keel-lol/releases/tag/v0.1.14)
 
 ## Kurulum
 
