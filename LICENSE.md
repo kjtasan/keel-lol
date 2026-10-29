@@ -25,6 +25,6 @@ To the extent permitted by law, the rights holder disclaims liability for data l
 ## Future versions, terms and paid features
 Free use of current releases does not promise free access to every future version, optional feature, cloud capacity or support service. New releases or services may have separate terms or fees. Material changes will be announced before taking effect and will identify the affected versions/services. Previously granted free use will not be charged retroactively. Paid services require disclosure and acceptance of their terms before activation.
 
-See [PRIVACY.md](PRIVACY.md) for data handling. These terms do not constitute blanket consent to personal-data processing. Permission questions may be raised at https://github.com/kjtasan/keel-lol/issues ; do not publish credentials or personal data there.
+See [PRIVACY.md](PRIVACY.md) for data handling. These terms do not constitute blanket consent to personal-data processing. For support, permission questions and privacy requests, email [lysander.yedek@gmail.com](mailto:lysander.yedek@gmail.com) or send a private Discord message to `kjtasan`. Messages and attachments you choose to send reach the developer. General bugs may be reported at https://github.com/kjtasan/keel-lol/issues ; do not publish credentials or personal data there.
 
 The Turkish [TERMS.md](TERMS.md) is the authoritative text if translations differ, subject to mandatory law.

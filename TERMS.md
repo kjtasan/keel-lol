@@ -39,8 +39,8 @@ Mevcut ücretsiz kullanım izni, tüm gelecek sürüm, özellik, bulut kapasites
 Veri akışını ve saklamayı [teknik gizlilik açıklamasında](PRIVACY.md) okuyabilirsin. Bu koşullar veri işleme için toplu açık rıza talebi değildir.
 
 Resmî dağıtım: https://github.com/kjtasan/keel-lol/releases  
-Lisans/izin soruları: https://github.com/kjtasan/keel-lol/issues
+Destek, lisans/izin ve gizlilik başvuruları: [lysander.yedek@gmail.com](mailto:lysander.yedek@gmail.com) veya Discord `kjtasan` (özel mesaj).
 
-Herkese açık sorun kayıtlarına API anahtarı, davet kodu veya kişisel maç/hesap bilgisi ekleme. Kişisel veri başvuruları için işletmeciden özel bir iletişim kanalı istemelisin.
+Herkese açık sorun kayıtlarına API anahtarı, davet kodu veya kişisel maç/hesap bilgisi ekleme. Kişisel veri başvurularını yukarıdaki özel iletişim kanallarından iletebilirsin; destek için kendin gönderdiğin mesaj ve ekler geliştiriciye ulaşır.
 
 İngilizce açıklama [LICENSE.md](LICENSE.md) içindedir. Çeviri farklarında, emredici hukuk hükümleri saklı kalmak üzere, bu Türkçe koşullar esas alınır.

@@ -1,7 +1,12 @@
 # Keel — Teknik Gizlilik Açıklaması
 Son inceleme: 29 Ekim 2026 · Kapsam: Keel 0.1.14 ve incelenen bulut hizmeti kaynak kodu
 
-Bu sayfa, uygulamanın hangi veriyi nerede kullandığını açıklar. **Tamamlanmış bir KVKK aydınlatma metni veya açık rıza formu değildir.** Hukuki veri sorumlusu kimliği, özel başvuru kanalı, işleme hukuki sebepleri ve uygulanacak yurt dışı aktarım koşulları ayrıca belirlenmelidir. Bu başlıkların kamuya açık GitHub sayfasında bulunmaması, verisi işlenen kullanıcıya gerekli bilgilendirmenin yapılması gereğini kaldırmaz.
+Bu sayfa, uygulamanın hangi veriyi nerede kullandığını açıklar. **Tamamlanmış bir KVKK aydınlatma metni veya açık rıza formu değildir.** Hukuki veri sorumlusu kimliği, işleme hukuki sebepleri ve uygulanacak yurt dışı aktarım koşulları ayrıca belirlenmelidir. Bu başlıkların kamuya açık GitHub sayfasında bulunmaması, verisi işlenen kullanıcıya gerekli bilgilendirmenin yapılması gereğini kaldırmaz.
+
+## Kısaca: veriler geliştiriciye mi gönderiliyor?
+Keel, bilgisayarındaki kişisel maç arşivini geliştiriciye e-posta, Discord mesajı veya otomatik bir kullanıcı raporu olarak göndermez. Yerel maç kayıtları ve ayrıntılı analiz bilgisayarında tutulur. Destek için kendin gönderdiğin mesaj, ekran görüntüsü veya dosyalar ise seçtiğin iletişim kanalından geliştiriciye ulaşır.
+
+**Bu, uygulamanın hiç veri işlemediği veya bulutta hiç kayıt bulunmadığı anlamına gelmez.** Davetli bulut bağlantısını kullandığında hesap/maç sorguları Keel'in Cloudflare üzerinde işlettiği hizmetten geçer; AI puanı için seçilmiş oyun istatistikleri hizmete iletilir. Kota/davet kayıtları ve AI sonuç önbelleği aşağıda açıklanan biçimde saklanır. Bu hizmetin yönetimi geliştiricidedir; hizmetteki kayıtların geliştiricinin erişemeyeceği kayıtlar olduğu iddia edilmez. Otomatik bir raporun geliştiricinin bilgisayarına gelmemesi ile bulutta veri işlenmesi farklı durumlardır.
 
 ## Hangi veri nereye gider?
 | İşlem | Bilgisayarında kalanlar | Hizmete iletilen / hizmette işlenenler |
@@ -37,6 +42,12 @@ Verilerin yalnızca Türkiye içinde işlendiği/saklandığı garantisi verilme
 ## Tercihler ve başvurular
 Bulut bağlantısı isteğe bağlıdır. Hesabım bölümünden bağlantıyı kaldırabilirsin; bu işlem mevcut kişisel kayıtları silmez ve buluttaki kalıcı AI önbelleğini otomatik temizlemez. Kullanım tercihin, her veri işleme faaliyeti için kendiliğinden geçerli bir hukuki dayanak veya toplu açık rıza olarak sunulmaz.
 
-İncelenen sürümde bulut AI sonuçlarını kullanıcıya özel olarak listeleyen/silen bir arayüz yoktur. Veri başvurusu için işletmeciden özel iletişim kanalı istenmelidir. [Herkese açık sorun alanında](https://github.com/kjtasan/keel-lol/issues) yalnızca özel iletişim talebini ilet; kişisel verilerini, API anahtarını veya davet kodunu yayımlama.
+İncelenen sürümde bulut AI sonuçlarını kullanıcıya özel olarak listeleyen/silen bir arayüz yoktur. Gizlilik sorularını, verilerine ilişkin erişim/silme taleplerini ve destek başvurularını aşağıdaki kanallardan iletebilirsin:
+- **E-posta:** [lysander.yedek@gmail.com](mailto:lysander.yedek@gmail.com)
+- **Discord kullanıcı adı:** `kjtasan` (özel mesaj)
+
+Bu kanallardan gönderdiğin mesajlar, ekler ve iletişim bilgilerin başvurunu yanıtlamak için geliştirici tarafından görülür ve kullanılan e-posta/Discord hizmetinde işlenir. İletişim hizmetlerinin kendi gizlilik ve saklama uygulamaları da geçerlidir. Başlangıçta yalnızca talebini ve yanıt verebilmek için gerekli bilgileri paylaş; Riot parolanı, API anahtarını veya davet kodunu gönderme. Bir kaydı bulmak veya talebin sana ait olduğunu doğrulamak için gereken ek bilgiler, ihtiyaç halinde özel kanaldan açıklanır. Kimlik içermeyen özet anahtarlarla tutulan AI önbelleğinde her sonucu bir kullanıcıyla eşleştirip seçerek silmenin mevcut sürümde garanti edilmediğini belirtiriz.
+
+[Herkese açık sorun alanını](https://github.com/kjtasan/keel-lol/issues) genel hata bildirimleri için kullanabilirsin; buraya kişisel hesap/maç bilgisi, özel yazışma, API anahtarı veya davet kodu ekleme.
 
 [KVKK'nın aydınlatma yükümlülüğü açıklaması](https://www.kvkk.gov.tr/Icerik/2033/Aydinlatma-Yukumlulugu-) doğrultusunda gerekli kimlik, iletişim, amaç, hukuki sebep, alıcı grupları ve haklar bilgisi ilgili kullanıcılara veri elde edilirken ayrıca sunulmalıdır.
