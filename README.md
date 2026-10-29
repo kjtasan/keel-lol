@@ -26,7 +26,7 @@ Takımın ve karşı takım şampiyon seçtikçe Keel seçenekleri yeniden değe
 
 ## Maça hazırlan, sonrasında dönüp bak
 
-Aşağıdaki özelliklerin tamamını **Riot anahtarı eklemeden** kullanabilirsin. Doğrulanmış ortak rün ve eşya dizilimleri kurulumla hazır gelir; kişisel maç geçmişinin boş olması bu önerileri engellemez.
+Aşağıdaki özelliklerin tamamını **Riot anahtarı eklemeden** kullanabilirsin. Doğrulanmış ortak rün ve eşya dizilimleri kurulumla hazır gelir; kişisel maç geçmişinin boş olması bu önerileri engellemez. Maç analizi için ilgili maçın yerel kaydı veya önceden indirilmiş Riot verisi gerekir. Riot'tan geçmiş maçları ilk kez almak/yenilemek kendi anahtarını ya da kapalı test davetini gerektirir; hazır yerel ayrıntılı raporu açmak ek AI kotası kullanmaz. AI performans puanı ayrı bir bulut özelliğidir.
 
 | Bölüm | Ne işe yarar? |
 |---|---|

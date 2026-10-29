@@ -32,6 +32,13 @@ Destek değerlendirmesinde minyon ve altın; ARAM değerlendirmesinde görüş/t
 - **Davet yönetimi:** İşletmecinin yerel yönetim kayıtlarında davet etiketi, kodu, son kullanma zamanı ve kotası bulunabilir. Buluta davetin kendisi yerine özeti ve izin bilgileri yapılandırılır; istek sırasında kullanılan kod doğrulama için işlenir.
 - **Günlükler:** İncelenen Cloudflare yapılandırmasında uygulama gözlemlenebilirlik günlükleri kapalıdır. Yerel LCU istek günlüğü uç nokta, zaman, sonuç ve süre bilgisi içindir; kimlik doğrulama başlıkları veya yanıt gövdeleri için değildir. Bu açıklama, hizmet sağlayıcıların tüm ağ/operasyon kayıtlarının sıfır olduğu iddiasını içermez.
 
+## Erişim ve güvenliğin sınırları
+Yerel kayıtlar, kendi Riot API anahtarını eklediysen anahtarın ve bulut davet kodun yerel dosyalarda tutulur. İncelenen sürüm bu ayar dosyaları için uygulamaya özel bir şifreli kasa kullanmaz. Bilgisayarına veya kullanıcı dosyalarına erişebilen kişiler/yazılımlar bu verilere de erişebilir; hesaplara göre yerel ayırma, bilgisayar yöneticisine karşı şifreleme anlamına gelmez.
+
+Bulut hizmetinin yönetim yetkisi geliştiricidedir; Cloudflare de hizmet sağlayıcı olarak verileri işler. Yalnızca senin erişebileceğin, geliştiricinin veya hizmet sağlayıcının erişmesinin teknik olarak imkânsız olduğu bir sistem taahhüt etmiyoruz. HTTPS, bağlantı sırasında iletimi korumak içindir; yerel dosyaları veya bulutta saklanan sonuçları yalnızca kullanıcının çözebileceği uçtan uca şifreleme iddiası değildir.
+
+Bu sayfa, belirtilen sürümün incelenen kaynak koduna dayanır. Canlı Cloudflare hesabının bütün erişim izinleri, sağlayıcı günlükleri ve yedekleri bağımsız olarak denetlenmiş değildir. Kaynak kod incelemesi, kapsamlı bir güvenlik denetimi veya eksiksiz hukuki uygunluk belgesi olarak sunulmaz.
+
 ## Hizmet sağlayıcılar ve yurt dışı işleme
 Riot Games hesap/maç verisi sağlar. Cloudflare Workers, Durable Objects ve Workers AI bulut bağlantısı, kota, önbellek ve AI değerlendirmesinde kullanılır. GitHub kurulum ve güncelleme dosyalarını sağlar. Bağlantı kurulurken bu hizmetler IP adresi, zaman ve istek boyutu gibi olağan ağ/operasyon bilgilerini kendi koşullarına göre işleyebilir.
 
