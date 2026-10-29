@@ -1,14 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-labelledby="title desc">
   <title id="title">keel. — League of Legends için maç hazırlığı ve değerlendirme</title>
-  <desc id="desc">Koyu lacivert zemin üzerinde Keel logosu. Riot anahtarı olmadan başla. Windows 10 ve 11, Türkçe arayüz.</desc>
+  <desc id="desc">Koyu lacivert zemin üzerinde Keel logosu. Windows 10 ve 11, Türkçe arayüz.</desc>
   <rect width="1280" height="300" rx="18" fill="#101a23"/>
   <rect x="1" y="1" width="1278" height="298" rx="17" fill="none" stroke="#30434e"/>
   <path d="M48 45h42" stroke="#b5dece" stroke-width="4"/>
   <text x="48" y="91" fill="#aebfc6" font-family="Segoe UI,Arial,sans-serif" font-size="14" letter-spacing="2">LEAGUE OF LEGENDS</text>
   <text x="43" y="209" fill="#f1f2ec" font-family="Segoe UI,Arial,sans-serif" font-size="112" font-weight="700" letter-spacing="-6">keel<tspan fill="#b5dece">.</tspan></text>
   <path d="M425 64v172" stroke="#30434e"/>
-  <text x="473" y="113" fill="#f1f2ec" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="600">Şampiyon seçimine hazırlan.</text>
-  <text x="473" y="156" fill="#f1f2ec" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="600">Maçını değerlendir.</text>
-  <text x="473" y="208" fill="#b5dece" font-family="Segoe UI,Arial,sans-serif" font-size="20">Riot anahtarı olmadan başla.</text>
+  <text x="473" y="137" fill="#f1f2ec" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="600">Şampiyon seçimine hazırlan.</text>
+  <text x="473" y="181" fill="#f1f2ec" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="600">Maçını değerlendir.</text>
   <text x="1232" y="266" text-anchor="end" fill="#aebfc6" font-family="Segoe UI,Arial,sans-serif" font-size="14">Windows 10 / 11 · Türkçe</text>
 </svg>
