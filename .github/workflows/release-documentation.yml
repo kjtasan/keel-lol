@@ -1,0 +1,58 @@
+name: Refresh release documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/releases/v0.1.14/**'
+      - '.github/workflows/release-documentation.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-documentation-0.1.14
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Read the approved public metadata
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git clone --depth 1 "https://github.com/$GITHUB_REPOSITORY.git" source
+          git -C source fetch --depth 1 origin "$SOURCE_SHA"
+          git -C source checkout --detach "$SOURCE_SHA"
+
+      - name: Verify the existing installer before changing metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir verification
+          gh release download v0.1.14 --repo "$GITHUB_REPOSITORY" --pattern Keel-Setup-0.1.14.exe --dir verification
+          python3 - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          folder=Path('source/docs/releases/v0.1.14')
+          payload=json.loads((folder/'latest.json').read_text())['payload']
+          expected='df1037954f17aa0137abcc602bea6e6e68a262a28de002897761c56efd726af0'
+          installer=Path('verification/Keel-Setup-0.1.14.exe')
+          digest=hashlib.sha256(installer.read_bytes()).hexdigest()
+          assert payload['version']=='0.1.14'
+          assert payload['sha256']==expected==digest
+          assert payload['size']==installer.stat().st_size
+          assert payload['installer_url']=='https://github.com/'+__import__('os').environ['GITHUB_REPOSITORY']+'/releases/download/v0.1.14/Keel-Setup-0.1.14.exe'
+          assert (folder/'SHA256SUMS.txt').read_text().strip()==expected+'  Keel-Setup-0.1.14.exe'
+          print('Existing installer verified; installer is unchanged.')
+          PY
+
+      - name: Refresh release notes and checksum asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release edit v0.1.14 --repo "$GITHUB_REPOSITORY" --notes-file source/docs/releases/v0.1.14/notes.md
+          gh release upload v0.1.14 --repo "$GITHUB_REPOSITORY" source/docs/releases/v0.1.14/SHA256SUMS.txt --clobber
+          gh release upload v0.1.14 --repo "$GITHUB_REPOSITORY" source/docs/releases/v0.1.14/latest.json --clobber

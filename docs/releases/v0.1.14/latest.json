@@ -1,0 +1,12 @@
+{
+  "payload": {
+    "schema": 1,
+    "version": "0.1.14",
+    "installer_url": "https://github.com/kjtasan/keel-lol/releases/download/v0.1.14/Keel-Setup-0.1.14.exe",
+    "sha256": "df1037954f17aa0137abcc602bea6e6e68a262a28de002897761c56efd726af0",
+    "size": 42560352,
+    "notes": "Keel daha hızlı açılıyor; küçük pencerelerde bölüm kartları okunaklı kalıyor.\n\n• Dar pencerelerde kart metinlerinin sıkışması düzeltildi.\n• Açılışta küçültme düğmesinin seçili görünmesi giderildi.\n• Logo daha erken görünüyor ve açılış beklemesi azaltıldı.\n\nÖneri kalitesi: Bu sürümde şampiyon önerilerini sıralama yöntemi, rün/eşya seçimi ve ortak oyun verileri değişmedi.\n\nBilinen sorunlar: Windows yayıncı sertifikası henüz yok; SmartScreen tanınmayan uygulama uyarısı gösterebilir. Bazı eşleşmelerde yeterli örnek bulunmayabilir. Keel kapalıyken oynanan maçlarda dakika bazlı yerel kayıt bulunmaz.\n\nAyarların ve kişisel maç kayıtların korunur. Sürüm notları ve SHA-256: https://github.com/kjtasan/keel-lol/releases/tag/v0.1.14",
+    "published_at": "2026-10-29T15:00:12.133316+00:00"
+  },
+  "signature": "elTRMz/KAw6Xf6ybgn/f+Z4LXAv7wquLAKIqdcMf+0EOoB4v80qH+2xstneQbmM+it7qs/rBcm7hLrhU949OCg=="
+}

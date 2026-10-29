@@ -68,9 +68,32 @@ Ana sayfadan seçim ekranına, kütüphaneye, maç geçmişine ve veri merkezine
 
 **Windows 10 (19041 ve sonrası) veya Windows 11 · 64 bit**
 
-1. [Son sürümün kurulum dosyasını indir.](https://github.com/kjtasan/keel-lol/releases/latest)
-2. Kurulumu tamamla ve masaüstü kısayolundan Keel’i aç.
-3. League istemcisini aç. Şampiyon seçimi başlayınca Keel ilgili ekrana otomatik geçer.
+1. [Son sürümün kurulum dosyasını resmî Releases sayfasından indir.](https://github.com/kjtasan/keel-lol/releases/latest)
+2. Dosyanın SHA-256 değerini sürüm notlarındaki değerle karşılaştır.
+3. Windows SmartScreen “Windows bilgisayarınızı korudu” şeklinde **tanınmayan uygulama** uyarısı gösterirse, kaynağı ve dosya özetini doğruladıktan sonra **Ek bilgi → Yine de çalıştır** seçeneğini kullanabilirsin. Bu seçenek görünmüyorsa veya Windows bir tehdit/yönetici engeli bildiriyorsa korumaları kapatma.
+4. Kurulumu tamamla ve masaüstü kısayolundan Keel’i aç.
+5. League istemcisini aç. Şampiyon seçimi başlayınca Keel ilgili ekrana otomatik geçer.
+
+Keel'in Windows yayıncı sertifikası henüz yoktur; bu yüzden SmartScreen uygulamayı tanımadığına dair uyarı gösterebilir. [Microsoft'un SmartScreen açıklaması](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
+
+<details>
+<summary><strong>0.1.14 kurucusunun SHA-256 değerini denetle</strong></summary>
+
+Dosya: `Keel-Setup-0.1.14.exe`
+
+```text
+df1037954f17aa0137abcc602bea6e6e68a262a28de002897761c56efd726af0
+```
+
+PowerShell'de kurucunun bulunduğu klasörden:
+
+```powershell
+Get-FileHash .\Keel-Setup-0.1.14.exe -Algorithm SHA256
+```
+
+Çıktıdaki özet yukarıdakiyle eşleşmelidir. Diğer sürümlerde o sürümün notlarındaki değeri veya `SHA256SUMS.txt` dosyasını kullan. Özet kontrolü, dosyanın yayımlanan kopyayla aynı olduğunu gösterir; Windows yayıncı imzasının yerine geçmez.
+
+</details>
 
 Başlamak için Riot anahtarı eklemen, Python kurman veya komut satırı kullanman gerekmez. Görüntüleme bileşeni eksikse kurulum Microsoft WebView2’yi internet üzerinden hazırlar.
 
@@ -98,6 +121,14 @@ Kendi Riot anahtarını girersen anahtar bilgisayarında saklanır. Davetli bulu
 Windows yayıncı sertifikası henüz eklenmemiştir. Resmî dağıtım adresi bu deponun [Releases](https://github.com/kjtasan/keel-lol/releases) bölümüdür. Keel’in güncelleme sistemi sürüm bilgisinin imzasını ve indirilen kurulum dosyasının bütünlüğünü kontrol eder.
 
 </details>
+
+## Lisans ve kullanım
+
+Keel **kişisel ve ticari olmayan kullanım için ücretsiz**, kaynak kodu kapalı bir uygulamadır. Bu depo tanıtım ve Windows dağıtımları içindir. İzinler için [LICENSE](LICENSE), Türkçe açıklama için [kullanım koşullarını](USAGE.md) inceleyebilirsin. Riot Games'in markaları ve oyun varlıkları kendi hak sahiplerine aittir.
+
+## Son sürümün kapsamı
+
+0.1.14 açılışı ve küçük pencerelerdeki kart yerleşimini iyileştirir. Bu sürümde şampiyon önerilerini sıralama yöntemi, rün/eşya seçimi ve ortak oyun verileri değişmedi. [Bilinen sorunlar ve sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v0.1.14).
 
 ---
 
