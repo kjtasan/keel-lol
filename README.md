@@ -124,7 +124,11 @@ Windows yayıncı sertifikası henüz eklenmemiştir. Resmî dağıtım adresi b
 
 ## Lisans ve kullanım
 
-Keel **kişisel ve ticari olmayan kullanım için ücretsiz**, kaynak kodu kapalı bir uygulamadır. Bu depo tanıtım ve Windows dağıtımları içindir. İzinler için [LICENSE](LICENSE), Türkçe açıklama için [kullanım koşullarını](USAGE.md) inceleyebilirsin. Riot Games'in markaları ve oyun varlıkları kendi hak sahiplerine aittir.
+Keel'in mevcut ücretsiz sürümleri kişisel kullanıma açıktır; kaynak kodu kapalıdır. Gelir elde edilen yayın ve videolarda kullanım, ekran görüntüsü ve ekran kaydı paylaşımı serbesttir. Yazılımı satma, değiştirme, tersine mühendislik yapma veya kurucuyu başka yerde barındırıp yeniden dağıtma izni verilmez; kanunun zorunlu olarak tanıdığı haklar saklıdır. Ayrıntılar [TERMS.md](TERMS.md), İngilizce açıklama [LICENSE.md](LICENSE.md), kısa özet [USAGE.md](USAGE.md) içindedir. Gelecekteki sürüm ve ek hizmetlerin ücretleri ayrıca belirlenebilir; geçmiş kullanım geriye dönük ücretlendirilmez.
+
+## Gizlilik
+
+Yerel kayıtlar, Cloudflare bulut bağlantısı ve AI değerlendirmesinin veri akışı [PRIVACY.md](PRIVACY.md) içinde açıklanır. AI modelinin istemine hesap kimlikleri eklenmez; buna rağmen AI sonuçları ve istatistik özet anahtarları bulutta kalıcı önbelleğe alınır ve mevcut kodda otomatik silme süresi yoktur. Bulut bağlantısını kaldırmak bu önbelleği otomatik silmez. Bu teknik açıklama, tamamlanmış bir KVKK aydınlatma metni olarak sunulmaz.
 
 ## Son sürümün kapsamı
 
