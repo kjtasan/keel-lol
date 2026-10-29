@@ -62,6 +62,8 @@ Ana sayfadan seçim ekranına, kütüphaneye, maç geçmişine ve veri merkezine
 
 </details>
 
+> **0.1.13 ile yenilendi:** Logoyla başlayan açılış, Keel’e özel başlık çubuğu, uyumlu kaydırma çubuğu ve sadeleştirilmiş ana sayfa. [Sürüm notlarını incele.](https://github.com/kjtasan/keel-lol/releases/tag/v0.1.13)
+
 ## Kurulum
 
 **Windows 10 (19041 ve sonrası) veya Windows 11 · 64 bit**
