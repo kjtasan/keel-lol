@@ -34,7 +34,7 @@ Aşağıdaki özelliklerin tamamını **Riot anahtarı eklemeden** kullanabilirs
 | **Maç hazırlığı** | Kilitlediğin şampiyon için rün, eşya ve sihirdar büyüsü seçeneklerini kısa bir koridor planıyla gösterir. |
 | **Sessiz mod** | Oyun sırasında bildirimlerle bölmez. Hazırladığın planı ve eşya önerilerini açıp inceleyebilirsin. |
 | **Kütüphane** | Şampiyonların yaygın rollerini, dizilimlerini, takım arkadaşlarıyla uyumunu ve rakip eşleşmelerini bir araya getirir. |
-| **Yerel maç analizi** | Keel açıkken kaydedilen maçlarda rolüne göre öne çıkanları, gözden geçirilecek noktaları ve sonraki maç için en fazla iki somut hedefi gösterir. Skor, görüş, minyon ve eşya kayıtlarını ayrıca inceleyebilirsin. |
+| **Maç analizi** | Maçtaki katkını, inceleyebileceğin noktaları ve sonraki maç için en fazla iki somut hedefi gösterir. Uygun geçmiş maçlarınla karşılaştırır; varsa canlı kaydınla gelişimini tamamlar. |
 | **Veri merkezi** | Kullanılan kaynakları ve veri kapsamını gösterir; yama ve ortak eşleşme verilerini yenileyebilirsin. |
 
 
