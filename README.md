@@ -34,7 +34,7 @@ Sıralama yalnız en yüksek yüzdeyi seçmez. Eşleşme oranı, takım uyumu ve
 
 Maç geçmişi; şampiyonunu, koridor rakibini, skorunu, rünlerini ve eşyalarını bir araya getirir. **Maç puanı**, rol ve moda göre uygun maç sonu ölçümlerinden bilgisayarında hesaplanır. Yalnız KDA’ya veya galibiyete dayanmaz; yeterli veri yoksa puan verilmez. **Neden?** ile gerekçeyi, **Maç analizi** ile katkılarını, karşılaştırmaları ve sonraki maç için somut hedefleri açabilirsin.
 
-<p align="center"><img src="docs/images/history-016.webp" alt="Temsili maç geçmişi: Ahri ile 14/2/11 ve 8,9 puanlık güçlü performans, Yasuo ile 3/11/4 ve 3,4 puanlık düşük performans" width="1440" loading="lazy"></p>
+<p align="center"><img src="docs/images/history-017.webp" alt="Temsili maç geçmişi: Ahri ile 14/2/11 ve 8,9 puanlık güçlü performans, Yasuo ile 3/11/4 ve 3,4 puanlık düşük performans" width="1440" loading="lazy"></p>
 
 *İki maç da temsili verilerle hazırlanmıştır; gerçek bir hesabın geçmişi değildir. 8,9 ve 3,4 puanları, örnek istatistiklerden uygulamanın mevcut yerel yöntemiyle hesaplanmıştır. Puanlar oyun içindeki her kararı ölçmez.*
 
@@ -73,18 +73,18 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 Keel'in Windows yayıncı sertifikası henüz yoktur; bu yüzden SmartScreen uygulamayı tanımadığına dair uyarı gösterebilir. [Microsoft'un SmartScreen açıklaması](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
 
 <details>
-<summary><strong>0.1.16 kurucusunun SHA-256 değerini denetle</strong></summary>
+<summary><strong>0.1.17 kurucusunun SHA-256 değerini denetle</strong></summary>
 
-Dosya: `Keel-Setup-0.1.16.exe`
+Dosya: `Keel-Setup-0.1.17.exe`
 
 ```text
-9c29f1aad8cb53623d95d7121493907e489a6e327cec2543b0393a7434a1a459
+d7019c8eae8817f09e345aa94cf13d0dd5032db48b08e2f5d45b8047b7cb9252
 ```
 
 PowerShell'de kurucunun bulunduğu klasörden:
 
 ```powershell
-Get-FileHash .\Keel-Setup-0.1.16.exe -Algorithm SHA256
+Get-FileHash .\Keel-Setup-0.1.17.exe -Algorithm SHA256
 ```
 
 Çıktıdaki özet yukarıdakiyle eşleşmelidir. Diğer sürümlerde o sürümün notlarındaki değeri veya `SHA256SUMS.txt` dosyasını kullan. Özet kontrolü, dosyanın yayımlanan kopyayla aynı olduğunu gösterir; Windows yayıncı imzasının yerine geçmez.
@@ -139,7 +139,7 @@ Destek, gizlilik ve kullanım izni soruları için **Discord: `kjtasan`** (özel
 
 ## Son sürümün kapsamı
 
-0.1.16, altı önerili şampiyon seçimini, takım arkadaşı başına uyum değerlendirmesini, maça özel planı ve yerel maç puanını getirir. [Kısa sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v0.1.16).
+Güncel sürüm; altı önerili şampiyon seçimini, takım arkadaşı başına uyum değerlendirmesini, maça özel planı ve yerel maç puanını içerir. [Sürümler](https://github.com/kjtasan/keel-lol/releases).
 
 ---
 
