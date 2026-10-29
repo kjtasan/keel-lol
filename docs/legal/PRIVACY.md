@@ -1,5 +1,5 @@
 # Keel — Teknik Gizlilik Açıklaması
-Son inceleme: 29 Ekim 2026 · Kapsam: Keel 0.1.14 ve incelenen bulut hizmeti kaynak kodu
+Son inceleme: 29 Ekim 2026 · Kapsam: Keel 0.1.15 ve incelenen bulut hizmeti kaynak kodu
 
 Bu sayfa, uygulamanın hangi veriyi nerede kullandığını açıklar. **Tamamlanmış bir KVKK aydınlatma metni veya açık rıza formu değildir.** Hukuki veri sorumlusu kimliği, işleme hukuki sebepleri ve uygulanacak yurt dışı aktarım koşulları ayrıca belirlenmelidir. Bu başlıkların kamuya açık GitHub sayfasında bulunmaması, verisi işlenen kullanıcıya gerekli bilgilendirmenin yapılması gereğini kaldırmaz.
 
@@ -47,7 +47,7 @@ Cloudflare'in Workers AI için açıkladığı içerik kullanım ilkeleri, Keel'
 Verilerin yalnızca Türkiye içinde işlendiği/saklandığı garantisi verilmez. Bu teknik sayfa, yurt dışı aktarım için gerekli hukuki mekanizmaların tamamlandığına ilişkin bir beyan değildir.
 
 ## Tercihler ve başvurular
-Bulut bağlantısı isteğe bağlıdır. Hesabım bölümünden bağlantıyı kaldırabilirsin; bu işlem mevcut kişisel kayıtları silmez ve buluttaki kalıcı AI önbelleğini otomatik temizlemez. Kullanım tercihin, her veri işleme faaliyeti için kendiliğinden geçerli bir hukuki dayanak veya toplu açık rıza olarak sunulmaz.
+Bulut bağlantısı isteğe bağlıdır. Hesabım bölümünden bağlantıyı kapatabilirsin; bu işlem mevcut kişisel kayıtları silmez ve buluttaki kalıcı AI önbelleğini otomatik temizlemez. Kullanım tercihin, her veri işleme faaliyeti için kendiliğinden geçerli bir hukuki dayanak veya toplu açık rıza olarak sunulmaz.
 
 İncelenen sürümde bulut AI sonuçlarını kullanıcıya özel olarak listeleyen/silen bir arayüz yoktur. Gizlilik sorularını, verilerine ilişkin erişim/silme taleplerini ve destek başvurularını aşağıdaki kanallardan iletebilirsin:
 - **E-posta:** [lysander.yedek@gmail.com](mailto:lysander.yedek@gmail.com)
@@ -58,3 +58,24 @@ Bu kanallardan gönderdiğin mesajlar, ekler ve iletişim bilgilerin başvurunu 
 [Herkese açık sorun alanını](https://github.com/kjtasan/keel-lol/issues) genel hata bildirimleri için kullanabilirsin; buraya kişisel hesap/maç bilgisi, özel yazışma, API anahtarı veya davet kodu ekleme.
 
 [KVKK'nın aydınlatma yükümlülüğü açıklaması](https://www.kvkk.gov.tr/Icerik/2033/Aydinlatma-Yukumlulugu-) doğrultusunda gerekli kimlik, iletişim, amaç, hukuki sebep, alıcı grupları ve haklar bilgisi ilgili kullanıcılara veri elde edilirken ayrıca sunulmalıdır.
+
+
+## Otomatik kapalı test bağlantısı
+Bu bölüm, 0.1.15 masaüstü sürümündeki otomatik test erişimini ve bulut kayıt akışını açıklar. İlk açılışta rastgele bir kurulum kodu oluşturulur, bilgisayardaki bağlantı ayarına kaydedilir ve HTTPS üzerinden erişim isteğinde kullanılır. Bu kod Riot hesabının parolası veya ortak Riot API anahtarı değildir. Bulut kodun SHA-256 özetiyle kurulum isteğini, oluşturulma zamanını ve test erişimi durumunu saklar. Onaylanmış kayıtlarda bitiş zamanı ve kota da vardır. Yeni cihaz, test yöneticisinin onayı olmadan Riot/AI verilerine erişemez; mevcut kayıtlı davetler korunur.
+
+Bekleyen isteklerin 7 günlük geçerlilik kontrolü vardır; temizlik gelen isteklerle yapılır ve tam 7. günde fiziksel silme garantisi değildir. Onaylı/iptal edilmiş kurulum kayıtları için genel bir otomatik silme süresi yoktur. Kayıt deposu toplam 100 kayıtla sınırlıdır. Yönetici kurulumların özet kimliklerini ve erişim durumlarını görebilir; otomatik cihazlar için en fazla 5 aktif onay ve 30 günlük izin uygulanır. İletişim için kendin bilgi paylaşmadığın sürece rastgele kurulum kodu kendi başına adın/e-posta adresin değildir; bunun tüm hizmeti anonim kıldığı iddia edilmez.
+
+Hesabım bölümünden tek düğmeyle bulut bağlantısını kesebilirsin. Tercih sonraki açılışlarda korunur. Yerel bağlantı kodu yeniden açabilmen için dosyada tutulur; bağlantıyı kapatmak kurulum kaydını, maç geçmişini veya kalıcı AI önbelleğini silmez. Yeniden açıldığında aynı kurulum kodu kullanılır. Genel yerel özellikler bulut kapalıyken çalışmaya devam eder. Başvuru iletişimi yukarıdaki Discord ve e-posta kanallarıdır.
+
+
+### Profil simgesi
+Bağlı hesabın profil simgesi, mevcut League istemcisi bilgisinden veya indirilen maçtaki ilgili oyuncunun son bilinen simge kimliğinden alınır ve yerel profil kaydında hatırlanır. Görsel, genel simge kimliği ve katalog sürümü kullanılarak Riot Data Dragon üzerinden indirilip bilgisayarda önbelleğe alınır; görsel isteğine Riot ID, PUUID, davet kodu veya Riot API anahtarı eklenmez. Simge kimliği AI değerlendirmesine gönderilmez. League kapalıyken görüntülenen simge son bilinen simge olabilir.
+
+
+
+### Birden fazla hesap ve otomatik havuz
+Bu bilgisayara eklenen Riot hesaplarının kimliği, sunucusu, şampiyon havuzu ve profil simgesi ayrı yerel kayıtlarda saklanır. Eski tek hesap korunarak listeye aktarılır; farklı kurulumların verileri kendiliğinden birleştirilmez. League'de açık hesap kayıtlı ve eşleşme tekilse Keel ona geçer. Bilinmeyen hesap kullanıcı tarafından Hesap ekle ile eklenir; sunucu tahmin edilmez.
+
+Hesap tespiti/geçişinde kayıtlı havuz hemen kullanılır. Havuz eksikse veya son hazırlama zamanı en az altı saat önceyse, bağlantı hazır olduğunda arka planda Riot maç sorguları yapılabilir. Sürekli zaman aralıklı sorgulama eklenmemiştir. Bulut kapatma tercihi korunur; kapatmak hesap veya maç kayıtlarını silmez. Devam eden havuz/geçmiş/AI işleri başladıkları hesaba bağlı kalır. İlk ekleme bildirimi kısa süre gösterilir; tekrarını önlemek için tarayıcı oturumunda yalnızca rastgele işlem kimliği tutulur.
+
+Geliştirme kurulumundaki güncelleme öncesinde yerel veritabanı yedeklenmiştir; bu işlem her kullanıcının kurulumunda otomatik yedek bulunduğu taahhüdü değildir. Keel'in mevcut yerel yedekleri GitHub'a veya Keel bulutuna gönderilmez.
