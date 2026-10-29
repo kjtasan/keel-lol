@@ -53,6 +53,7 @@ jobs:
           if payload['installer_url']!=expected:raise SystemExit('Release URL mismatch')
           shutil.copyfile(folder/'latest.json',output/'latest.json')
           (output/'notes.md').write_text(payload['notes'],encoding='utf-8')
+          (output/'SHA256SUMS.txt').write_text(payload['sha256']+'  '+installer.name+'\n',encoding='utf-8')
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('version='+version+'\nfilename='+installer.name+'\n')
           print('Verified installer:',installer.name,'bytes:',size,'sha256:',digest.hexdigest())
           PY
@@ -70,7 +71,7 @@ jobs:
             exit 1
           fi
           target="$(gh api "repos/$RELEASE_REPOSITORY" --jq .default_branch)"
-          gh release create "$tag" "release/$INSTALLER_NAME" release/latest.json --repo "$RELEASE_REPOSITORY" --target "$target" --draft --title "Keel $RELEASE_VERSION" --notes-file release/notes.md
+          gh release create "$tag" "release/$INSTALLER_NAME" release/latest.json release/SHA256SUMS.txt --repo "$RELEASE_REPOSITORY" --target "$target" --draft --title "Keel $RELEASE_VERSION" --notes-file release/notes.md
           gh release edit "$tag" --repo "$RELEASE_REPOSITORY" --draft=false --latest
 
       - name: Remove temporary upload branch
