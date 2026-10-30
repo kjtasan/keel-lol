@@ -32,9 +32,9 @@ Sıralama yalnız en yüksek yüzdeyi seçmez. Eşleşme oranı, takım uyumu ve
 
 ## Maçtaki katkını gör
 
-Maç geçmişi; şampiyonunu, koridor rakibini, skorunu, rünlerini ve eşyalarını bir araya getirir. **Maç puanı**, rol ve moda göre uygun maç sonu ölçümlerinden bilgisayarında hesaplanır. Yalnız KDA’ya veya galibiyete dayanmaz; yeterli veri yoksa puan verilmez. **Neden?** ile gerekçeyi, **Maç analizi** ile katkılarını, karşılaştırmaları ve sonraki maç için somut hedefleri açabilirsin.
+Maç geçmişi; şampiyonunu, koridor rakibini, skorunu, rünlerini ve eşyalarını bir araya getirir. **Maç puanı**, rol ve moda göre uygun maç sonu ölçümlerinden bilgisayarında hesaplanır. Yalnız KDA’ya veya galibiyete dayanmaz; yeterli veri yoksa puan verilmez. **Neden?** ile gerekçeyi, maç kartına tıklayarak katkılarını, karşılaştırmaları ve sonraki maç için somut hedefleri açabilirsin. Varsa canlı maç analizine de açılan rapordan ulaşabilirsin.
 
-<p align="center"><img src="docs/images/history-017.webp" alt="Temsili maç geçmişi: Ahri ile 14/2/11 ve 8,9 puanlık güçlü performans, Yasuo ile 3/11/4 ve 3,4 puanlık düşük performans" width="1440" loading="lazy"></p>
+<p align="center"><img src="docs/images/history-017.webp?v=2" alt="Temsili maç geçmişi: Ahri ile 14/2/11 ve 8,9 puanlık güçlü performans, Yasuo ile 3/11/4 ve 3,4 puanlık düşük performans" width="1440" loading="lazy"></p>
 
 *İki maç da temsili verilerle hazırlanmıştır; gerçek bir hesabın geçmişi değildir. 8,9 ve 3,4 puanları, örnek istatistiklerden uygulamanın mevcut yerel yöntemiyle hesaplanmıştır. Puanlar oyun içindeki her kararı ölçmez.*
 
@@ -62,6 +62,8 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 
 ## Kurulum
 
+0.1.17’yi daha önce kurduysan güncel kurucuyu bir kez yeniden çalıştır. Sürüm numarası aynı kaldığı için bu yenileme otomatik güncellemede ayrı bir sürüm olarak görünmez.
+
 **Windows 10 (19041 ve sonrası) veya Windows 11 · 64 bit**
 
 1. [Son sürümün kurulum dosyasını resmî Releases sayfasından indir.](https://github.com/kjtasan/keel-lol/releases/latest)
@@ -78,7 +80,7 @@ Keel'in Windows yayıncı sertifikası henüz yoktur; bu yüzden SmartScreen uyg
 Dosya: `Keel-Setup-0.1.17.exe`
 
 ```text
-d7019c8eae8817f09e345aa94cf13d0dd5032db48b08e2f5d45b8047b7cb9252
+f764b912235226c74ad1ec8ac5ce66b8c8e376a2fbbc8ce72e7e9efc3c44ece3
 ```
 
 PowerShell'de kurucunun bulunduğu klasörden:

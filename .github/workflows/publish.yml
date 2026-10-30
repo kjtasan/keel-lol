@@ -54,7 +54,12 @@ jobs:
           shutil.copyfile(folder/'latest.json',output/'latest.json')
           (output/'notes.md').write_text(payload['notes'],encoding='utf-8')
           (output/'SHA256SUMS.txt').write_text(payload['sha256']+'  '+installer.name+'\n',encoding='utf-8')
-          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('version='+version+'\nfilename='+installer.name+'\n')
+          replace=folder/'replace.json'
+          old=''
+          if replace.exists():
+              old=json.loads(replace.read_text(encoding='utf-8'))['expected_sha256']
+              if not re.fullmatch('[a-f0-9]{64}',old):raise SystemExit('Invalid replacement guard')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('version='+version+'\nfilename='+installer.name+'\nreplace_sha256='+old+'\n')
           print('Verified installer:',installer.name,'bytes:',size,'sha256:',digest.hexdigest())
           PY
 
@@ -64,15 +69,31 @@ jobs:
           RELEASE_REPOSITORY: ${{ github.repository }}
           RELEASE_VERSION: ${{ steps.package.outputs.version }}
           INSTALLER_NAME: ${{ steps.package.outputs.filename }}
+          REPLACE_SHA256: ${{ steps.package.outputs.replace_sha256 }}
         run: |
           tag="v$RELEASE_VERSION"
           if gh release view "$tag" --repo "$RELEASE_REPOSITORY" >/dev/null 2>&1; then
-            echo "This release already exists. Refusing to overwrite it."
-            exit 1
+            if [ -z "$REPLACE_SHA256" ]; then
+              echo "This release already exists. Explicit replacement guard required."
+              exit 1
+            fi
+            current="$(gh api "repos/$RELEASE_REPOSITORY/releases/tags/$tag" --jq ".assets[] | select(.name == \"$INSTALLER_NAME\") | .digest")"
+            if [ "$current" != "sha256:$REPLACE_SHA256" ]; then
+              echo "Published installer changed. Refusing replacement."
+              exit 1
+            fi
+            gh release upload "$tag" "release/$INSTALLER_NAME" release/SHA256SUMS.txt --repo "$RELEASE_REPOSITORY" --clobber
+            gh release upload "$tag" release/latest.json --repo "$RELEASE_REPOSITORY" --clobber
+            gh release edit "$tag" --repo "$RELEASE_REPOSITORY" --notes-file release/notes.md --latest
+          else
+            if [ -n "$REPLACE_SHA256" ]; then
+              echo "Replacement target does not exist."
+              exit 1
+            fi
+            target="$(gh api "repos/$RELEASE_REPOSITORY" --jq .default_branch)"
+            gh release create "$tag" "release/$INSTALLER_NAME" release/latest.json release/SHA256SUMS.txt --repo "$RELEASE_REPOSITORY" --target "$target" --draft --title "Keel $RELEASE_VERSION" --notes-file release/notes.md
+            gh release edit "$tag" --repo "$RELEASE_REPOSITORY" --draft=false --latest
           fi
-          target="$(gh api "repos/$RELEASE_REPOSITORY" --jq .default_branch)"
-          gh release create "$tag" "release/$INSTALLER_NAME" release/latest.json release/SHA256SUMS.txt --repo "$RELEASE_REPOSITORY" --target "$target" --draft --title "Keel $RELEASE_VERSION" --notes-file release/notes.md
-          gh release edit "$tag" --repo "$RELEASE_REPOSITORY" --draft=false --latest
 
       - name: Remove temporary upload branch
         env:
@@ -81,4 +102,3 @@ jobs:
           SOURCE_BRANCH: ${{ github.ref_name }}
         run: |
           gh api --method DELETE "repos/$RELEASE_REPOSITORY/git/refs/heads/$SOURCE_BRANCH"
-
