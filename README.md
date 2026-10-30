@@ -62,8 +62,6 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 
 ## Kurulum
 
-0.1.17’yi daha önce kurduysan güncel kurucuyu bir kez yeniden çalıştır. Sürüm numarası aynı kaldığı için bu yenileme otomatik güncellemede ayrı bir sürüm olarak görünmez.
-
 **Windows 10 (19041 ve sonrası) veya Windows 11 · 64 bit**
 
 1. [Son sürümün kurulum dosyasını resmî Releases sayfasından indir.](https://github.com/kjtasan/keel-lol/releases/latest)
@@ -75,18 +73,18 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 Keel'in Windows yayıncı sertifikası henüz yoktur; bu yüzden SmartScreen uygulamayı tanımadığına dair uyarı gösterebilir. [Microsoft'un SmartScreen açıklaması](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
 
 <details>
-<summary><strong>0.1.17 kurucusunun SHA-256 değerini denetle</strong></summary>
+<summary><strong>0.1.18 kurucusunun SHA-256 değerini denetle</strong></summary>
 
-Dosya: `Keel-Setup-0.1.17.exe`
+Dosya: `Keel-Setup-0.1.18.exe`
 
 ```text
-f764b912235226c74ad1ec8ac5ce66b8c8e376a2fbbc8ce72e7e9efc3c44ece3
+465d5e2e79508c61679d5b7e12b78845aa667546616a4fc9cf7917a5658039f2
 ```
 
 PowerShell'de kurucunun bulunduğu klasörden:
 
 ```powershell
-Get-FileHash .\Keel-Setup-0.1.17.exe -Algorithm SHA256
+Get-FileHash .\Keel-Setup-0.1.18.exe -Algorithm SHA256
 ```
 
 Çıktıdaki özet yukarıdakiyle eşleşmelidir. Diğer sürümlerde o sürümün notlarındaki değeri veya `SHA256SUMS.txt` dosyasını kullan. Özet kontrolü, dosyanın yayımlanan kopyayla aynı olduğunu gösterir; Windows yayıncı imzasının yerine geçmez.
