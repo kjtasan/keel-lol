@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="docs/images/cover.svg?v=3" alt="keel. — League of Legends için şampiyon önerileri ve maç analizi." width="1280">
+  <img src="docs/images/cover.svg?v=4" alt="keel. — League of Legends için şampiyon önerileri ve maç analizi." width="1280">
 </p>
 
 <p align="center">
-  <a href="https://github.com/kjtasan/keel-lol/releases/latest"><img src="docs/images/download.svg" alt="Windows için Keel’i indir" width="246" height="48"></a>
+  <a href="https://github.com/kjtasan/keel-lol/releases/latest"><img src="docs/images/download.svg?v=2" alt="Windows için Keel’i indir" width="246" height="48"></a>
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@ Keel, League of Legends için şampiyon önerileri, maç hazırlığı ve perfor
 
 Ana sayfadan şampiyon seçimine, kişisel havuzuna, maç geçmişine ve kütüphaneye ulaş. League istemcisiyle bağlantı otomatik kurulur; seçim başlayınca ilgili ekran açılır.
 
-<p align="center"><img src="docs/images/home-016.webp" alt="Keel ana sayfası: DWG Jhin görseli, şampiyon seçimi ve bölüm bağlantıları" width="1440" loading="lazy"></p>
+<p align="center"><img src="docs/images/home-100.webp" alt="Keel ana sayfası: DWG Jhin görseli, şampiyon seçimi ve bölüm bağlantıları" width="1440" loading="lazy"></p>
 
 *Güncel ana sayfa; sol alttaki hesap bilgisi temsili olarak gösterilmiştir.*
 
@@ -26,7 +26,7 @@ En iyi seçenek öne çıkar; diğer beş öneriyi aynı ekranda karşılaştır
 
 Sıralama yalnız en yüksek yüzdeyi seçmez. Eşleşme oranı, takım uyumu ve örnek desteği birlikte değerlendirilir; yakın oranlarda daha güçlü takım uyumu öne geçebilir. **3/4** gibi gösterimler, seçilmiş dört takım arkadaşından kaçının ikili verisinin bulunduğunu belirtir. Eksik veriden uyum veya oran üretilmez.
 
-<p align="center"><img src="docs/images/draft-016.webp" alt="Temsili yeni seçim ekranı: ortada altı öneri, Ahri karşısında kazanma oranları, Leona ve diğer takım arkadaşlarıyla ikili uyum, iki yanda takımlar ve yasaklar" width="1440" loading="lazy"></p>
+<p align="center"><img src="docs/images/draft-100.webp" alt="Temsili yeni seçim ekranı: ortada altı öneri, Ahri karşısında kazanma oranları, Leona ve diğer takım arkadaşlarıyla ikili uyum, iki yanda takımlar ve yasaklar" width="1440" loading="lazy"></p>
 
 *Temsili seçim ekranı. Bu görseldeki oranlar, örnek sayıları ve sıralama arayüzü tanıtmak içindir; gerçek veya güncel eşleşme istatistiği olarak kullanılmamalıdır. İkili oranları tüm takımın kazanma ihtimali değildir.*
 
@@ -34,7 +34,7 @@ Sıralama yalnız en yüksek yüzdeyi seçmez. Eşleşme oranı, takım uyumu ve
 
 Maç geçmişi; şampiyonunu, koridor rakibini, skorunu, rünlerini ve eşyalarını bir araya getirir. **Maç puanı**, rol ve moda göre uygun maç sonu ölçümlerinden bilgisayarında hesaplanır. Yalnız KDA’ya veya galibiyete dayanmaz; yeterli veri yoksa puan verilmez. **Neden?** ile gerekçeyi, maç kartına tıklayarak katkılarını, karşılaştırmaları ve sonraki maç için somut hedefleri açabilirsin. Varsa canlı maç analizine de açılan rapordan ulaşabilirsin.
 
-<p align="center"><img src="docs/images/history-017.webp?v=2" alt="Temsili maç geçmişi: Ahri ile 14/2/11 ve 8,9 puanlık güçlü performans, Yasuo ile 3/11/4 ve 3,4 puanlık düşük performans" width="1440" loading="lazy"></p>
+<p align="center"><img src="docs/images/history-100.webp" alt="Temsili maç geçmişi: Ahri ile 14/2/11 ve 8,9 puanlık güçlü performans, Yasuo ile 3/11/4 ve 3,4 puanlık düşük performans" width="1440" loading="lazy"></p>
 
 *İki maç da temsili verilerle hazırlanmıştır; gerçek bir hesabın geçmişi değildir. 8,9 ve 3,4 puanları, örnek istatistiklerden uygulamanın mevcut yerel yöntemiyle hesaplanmıştır. Puanlar oyun içindeki her kararı ölçmez.*
 
@@ -54,7 +54,7 @@ Maç geçmişi; şampiyonunu, koridor rakibini, skorunu, rünlerini ve eşyalar�
 
 Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar kullanılır. Ortak şampiyon, dizilim ve görsel verileri kurulumla hazır gelir.
 
-![Keel şampiyon kütüphanesi](docs/images/library.webp)
+![Keel şampiyon kütüphanesi](docs/images/library-100.webp)
 
 </details>
 
@@ -99,7 +99,7 @@ Başlamak için Riot anahtarı eklemen, Python kurman veya komut satırı kullan
 
 **Hesabım → Hesap ekle** üzerinden Riot ID ve sunucunu seç. League açıksa oyun adını bulabiliriz; sunucunu ayrıca kontrol et. Birden fazla hesap saklayabilirsin. League'de kayıtlı hesabını açınca Keel ona geçer, kayıtlı havuzunu gösterir ve eksik/eski havuzu gerektiğinde arka planda yeniler. İlk ekleme bildirimi kısa süre görünür.
 
-![Örnek hesaplarla Keel hesap yönetimi](docs/images/accounts-current.png)
+![Örnek hesaplarla Keel hesap yönetimi](docs/images/accounts-100.webp)
 
 *Görsel örnek hesaplar içerir; gerçek kişisel hesap veya maç verisi değildir.*
 
