@@ -16,7 +16,7 @@ Keel, League of Legends için şampiyon önerileri, maç hazırlığı ve perfor
 
 Ana sayfadan şampiyon seçimine, kişisel havuzuna, maç geçmişine ve kütüphaneye ulaş. League istemcisiyle bağlantı otomatik kurulur; seçim başlayınca ilgili ekran açılır.
 
-<p align="center"><img src="docs/images/home-100.webp" alt="Keel ana sayfası: DWG Jhin görseli, şampiyon seçimi ve bölüm bağlantıları" width="1440" loading="lazy"></p>
+<p align="center"><img src="docs/images/home-100-compact.webp" alt="Keel ana sayfası: DWG Jhin görseli, şampiyon seçimi ve bölüm bağlantıları" width="1440" loading="lazy"></p>
 
 *Güncel ana sayfa; sol alttaki hesap bilgisi temsili olarak gösterilmiştir.*
 
