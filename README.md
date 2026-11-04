@@ -78,7 +78,7 @@ Keel'in Windows yayıncı sertifikası henüz yoktur; bu yüzden SmartScreen uyg
 Dosya: `Keel-Setup-0.1.20.exe`
 
 ```text
-5d28b51e99b6b354d84c68a1a39a7f4208681deb08c2ea03eef95bab1dbb8556
+30c65264d6531d9d60f6a70d48b0ed8aacb6929e8b7617753c278742cf63b5f5
 ```
 
 PowerShell'de kurucunun bulunduğu klasörden:
