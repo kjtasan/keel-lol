@@ -58,7 +58,7 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 
 </details>
 
-> **0.1.20:** Daha akıcı açılış, sade maç analizi ve tüm şampiyonlar için oynanış ipuçları. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v0.1.20).
+> **1.0.0:** Yenilenen arayüz, daha okunaklı maç analizi ve iki yamayı kapsayan maç arşivi. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v1.0.0).
 
 ## Kurulum
 
@@ -73,18 +73,18 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 Keel'in Windows yayıncı sertifikası henüz yoktur; bu yüzden SmartScreen uygulamayı tanımadığına dair uyarı gösterebilir. [Microsoft'un SmartScreen açıklaması](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
 
 <details>
-<summary><strong>0.1.20 kurucusunun SHA-256 değerini denetle</strong></summary>
+<summary><strong>1.0.0 kurucusunun SHA-256 değerini denetle</strong></summary>
 
-Dosya: `Keel-Setup-0.1.20.exe`
+Dosya: `Keel-Setup-1.0.0.exe`
 
 ```text
-30c65264d6531d9d60f6a70d48b0ed8aacb6929e8b7617753c278742cf63b5f5
+2fb38575e6b4ad1e9e7a744464896b9898e481b52bbd8e4d9533e5a8cf6cef59
 ```
 
 PowerShell'de kurucunun bulunduğu klasörden:
 
 ```powershell
-Get-FileHash .\Keel-Setup-0.1.20.exe -Algorithm SHA256
+Get-FileHash .\Keel-Setup-1.0.0.exe -Algorithm SHA256
 ```
 
 Çıktıdaki özet yukarıdakiyle eşleşmelidir. Diğer sürümlerde o sürümün notlarındaki değeri veya `SHA256SUMS.txt` dosyasını kullan. Özet kontrolü, dosyanın yayımlanan kopyayla aynı olduğunu gösterir; Windows yayıncı imzasının yerine geçmez.
