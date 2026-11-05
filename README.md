@@ -58,7 +58,7 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 
 </details>
 
-> **1.1.0:** Günlük görevler, Normal/Fütürist tema seçimi ve yenilenen Ayarlar. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v1.1.0).
+> **1.2.0:** Oyun aşaması analizi, kişisel eşleşme notları ve gelişim görevleri. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v1.2.0).
 
 ## Günlük görevler ve görünüm
 
@@ -79,18 +79,18 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 Keel'in Windows yayıncı sertifikası henüz yoktur; bu yüzden SmartScreen uygulamayı tanımadığına dair uyarı gösterebilir. [Microsoft'un SmartScreen açıklaması](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
 
 <details>
-<summary><strong>1.1.0 kurucusunun SHA-256 değerini denetle</strong></summary>
+<summary><strong>1.2.0 kurucusunun SHA-256 değerini denetle</strong></summary>
 
-Dosya: `Keel-Setup-1.1.0.exe`
+Dosya: `Keel-Setup-1.2.0.exe`
 
 ```text
-eb85137881969cee2cde3c1e015eec362a8c8eaaf2cb42600378c35561d5e59b
+482bfc2c156cf0e5f6d313461cf7ed9c578a64992878169965b9f0561dbccc40
 ```
 
 PowerShell'de kurucunun bulunduğu klasörden:
 
 ```powershell
-Get-FileHash .\Keel-Setup-1.1.0.exe -Algorithm SHA256
+Get-FileHash .\Keel-Setup-1.2.0.exe -Algorithm SHA256
 ```
 
 Çıktıdaki özet yukarıdakiyle eşleşmelidir. Diğer sürümlerde o sürümün notlarındaki değeri veya `SHA256SUMS.txt` dosyasını kullan. Özet kontrolü, dosyanın yayımlanan kopyayla aynı olduğunu gösterir; Windows yayıncı imzasının yerine geçmez.
@@ -145,7 +145,7 @@ Destek, gizlilik ve kullanım izni soruları için **Discord: `kjtasan`** (özel
 
 ## Son sürümün kapsamı
 
-Güncel sürüm; altı önerili şampiyon seçimini, takım arkadaşı başına uyum değerlendirmesini, maça özel planı ve yerel maç puanını içerir. [Sürümler](https://github.com/kjtasan/keel-lol/releases).
+Keel 1.2, seçimdeki oyun aşaması tahminlerini maç sonunda gerçek altın farkıyla karşılaştırır. Aynı rakibe karşı önceki maçını ve kişisel notunu seçim ekranında görebilir, Şampiyonlarım’da tekrarlayan alışkanlıklarını inceleyebilirsin. Ortak arşiv 14.221 maç içerir. [Sürümler](https://github.com/kjtasan/keel-lol/releases).
 
 ---
 
