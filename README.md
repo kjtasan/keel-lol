@@ -16,7 +16,7 @@ Keel, League of Legends için şampiyon önerileri, maç hazırlığı ve perfor
 
 Ana sayfadan şampiyon seçimine, kişisel havuzuna, maç geçmişine ve kütüphaneye ulaş. League istemcisiyle bağlantı otomatik kurulur; seçim başlayınca ilgili ekran açılır.
 
-<p align="center"><img src="docs/images/home-100-compact.webp" alt="Keel ana sayfası: DWG Jhin görseli, şampiyon seçimi ve bölüm bağlantıları" width="1440" loading="lazy"></p>
+<p align="center"><img src="docs/images/home-110.webp" alt="Keel ana sayfası: DWG Jhin görseli, şampiyon seçimi ve bölüm bağlantıları" width="1440" loading="lazy"></p>
 
 *Güncel ana sayfa; sol alttaki hesap bilgisi temsili olarak gösterilmiştir.*
 
@@ -26,7 +26,7 @@ En iyi seçenek öne çıkar; diğer beş öneriyi aynı ekranda karşılaştır
 
 Sıralama yalnız en yüksek yüzdeyi seçmez. Eşleşme oranı, takım uyumu ve örnek desteği birlikte değerlendirilir; yakın oranlarda daha güçlü takım uyumu öne geçebilir. **3/4** gibi gösterimler, seçilmiş dört takım arkadaşından kaçının ikili verisinin bulunduğunu belirtir. Eksik veriden uyum veya oran üretilmez.
 
-<p align="center"><img src="docs/images/draft-100.webp" alt="Temsili yeni seçim ekranı: ortada altı öneri, Ahri karşısında kazanma oranları, Leona ve diğer takım arkadaşlarıyla ikili uyum, iki yanda takımlar ve yasaklar" width="1440" loading="lazy"></p>
+<p align="center"><img src="docs/images/draft-110.webp" alt="Temsili yeni seçim ekranı: ortada altı öneri, Ahri karşısında kazanma oranları, Leona ve diğer takım arkadaşlarıyla ikili uyum, iki yanda takımlar ve yasaklar" width="1440" loading="lazy"></p>
 
 *Temsili seçim ekranı. Bu görseldeki oranlar, örnek sayıları ve sıralama arayüzü tanıtmak içindir; gerçek veya güncel eşleşme istatistiği olarak kullanılmamalıdır. İkili oranları tüm takımın kazanma ihtimali değildir.*
 
@@ -34,7 +34,7 @@ Sıralama yalnız en yüksek yüzdeyi seçmez. Eşleşme oranı, takım uyumu ve
 
 Maç geçmişi; şampiyonunu, koridor rakibini, skorunu, rünlerini ve eşyalarını bir araya getirir. **Maç puanı**, rol ve moda göre uygun maç sonu ölçümlerinden bilgisayarında hesaplanır. Yalnız KDA’ya veya galibiyete dayanmaz; yeterli veri yoksa puan verilmez. **Neden?** ile gerekçeyi, maç kartına tıklayarak katkılarını, karşılaştırmaları ve sonraki maç için somut hedefleri açabilirsin. Varsa canlı maç analizine de açılan rapordan ulaşabilirsin.
 
-<p align="center"><img src="docs/images/history-100.webp" alt="Temsili maç geçmişi: Ahri ile 14/2/11 ve 8,9 puanlık güçlü performans, Yasuo ile 3/11/4 ve 3,4 puanlık düşük performans" width="1440" loading="lazy"></p>
+<p align="center"><img src="docs/images/history-110.webp" alt="Temsili maç geçmişi: Ahri ile 14/2/11 ve 8,9 puanlık güçlü performans, Yasuo ile 3/11/4 ve 3,4 puanlık düşük performans" width="1440" loading="lazy"></p>
 
 *İki maç da temsili verilerle hazırlanmıştır; gerçek bir hesabın geçmişi değildir. 8,9 ve 3,4 puanları, örnek istatistiklerden uygulamanın mevcut yerel yöntemiyle hesaplanmıştır. Puanlar oyun içindeki her kararı ölçmez.*
 
@@ -54,11 +54,17 @@ Maç geçmişi; şampiyonunu, koridor rakibini, skorunu, rünlerini ve eşyalar�
 
 Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar kullanılır. Ortak şampiyon, dizilim ve görsel verileri kurulumla hazır gelir.
 
-![Keel şampiyon kütüphanesi](docs/images/library-100.webp)
+![Keel şampiyon kütüphanesi](docs/images/library-110.webp)
 
 </details>
 
-> **1.0.0:** Yenilenen arayüz, daha okunaklı maç analizi ve iki yamayı kapsayan maç arşivi. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v1.0.0).
+> **1.1.0:** Günlük görevler, Normal/Fütürist tema seçimi ve yenilenen Ayarlar. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v1.1.0).
+
+## Günlük görevler ve görünüm
+
+**Görevler** bölümünde her gün bir genel, bir rol odaklı ve bir sonraki maç görevi bulunur. Normal ve dereceli Vadi maçları sayılır. İlerleme maç geçmişi yenilendiğinde hesaplanır; görevler bilgisayarının saatine göre gece yarısında değişir.
+
+**Ayarlar** bölümünde Normal ve Fütürist temaları seçebilir, bulut bağlantını, kişisel Riot anahtarını ve güncellemelerini yönetebilirsin. Normal tema varsayılandır. Hesap ekleme ve kayıtlı hesaplar **Hesabım** bölümündedir.
 
 ## Kurulum
 
@@ -73,18 +79,18 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 Keel'in Windows yayıncı sertifikası henüz yoktur; bu yüzden SmartScreen uygulamayı tanımadığına dair uyarı gösterebilir. [Microsoft'un SmartScreen açıklaması](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
 
 <details>
-<summary><strong>1.0.0 kurucusunun SHA-256 değerini denetle</strong></summary>
+<summary><strong>1.1.0 kurucusunun SHA-256 değerini denetle</strong></summary>
 
-Dosya: `Keel-Setup-1.0.0.exe`
+Dosya: `Keel-Setup-1.1.0.exe`
 
 ```text
-2fb38575e6b4ad1e9e7a744464896b9898e481b52bbd8e4d9533e5a8cf6cef59
+eb85137881969cee2cde3c1e015eec362a8c8eaaf2cb42600378c35561d5e59b
 ```
 
 PowerShell'de kurucunun bulunduğu klasörden:
 
 ```powershell
-Get-FileHash .\Keel-Setup-1.0.0.exe -Algorithm SHA256
+Get-FileHash .\Keel-Setup-1.1.0.exe -Algorithm SHA256
 ```
 
 Çıktıdaki özet yukarıdakiyle eşleşmelidir. Diğer sürümlerde o sürümün notlarındaki değeri veya `SHA256SUMS.txt` dosyasını kullan. Özet kontrolü, dosyanın yayımlanan kopyayla aynı olduğunu gösterir; Windows yayıncı imzasının yerine geçmez.
@@ -99,17 +105,17 @@ Başlamak için Riot anahtarı eklemen, Python kurman veya komut satırı kullan
 
 **Hesabım → Hesap ekle** üzerinden Riot ID ve sunucunu seç. League açıksa oyun adını bulabiliriz; sunucunu ayrıca kontrol et. Birden fazla hesap saklayabilirsin. League'de kayıtlı hesabını açınca Keel ona geçer, kayıtlı havuzunu gösterir ve eksik/eski havuzu gerektiğinde arka planda yeniler. İlk ekleme bildirimi kısa süre görünür.
 
-![Örnek hesaplarla Keel hesap yönetimi](docs/images/accounts-100.webp)
+![Örnek hesaplarla Keel hesap yönetimi](docs/images/accounts-110.webp)
 
 *Görsel örnek hesaplar içerir; gerçek kişisel hesap veya maç verisi değildir.*
 
-**Bağlantıyı kes** ile bulutu tek düğmeyle kapatabilirsin. Tercihin sonraki açılışlarda korunur; tek düğmeyle yeniden açabilirsin. Kapatmak bilgisayarındaki hesapları/geçmişi veya bulut önbelleğini silmez. Genel öneriler, kütüphane ve yerel kayıtlar kullanılabilir.
+**Ayarlar → Bağlantıyı kes** ile bulutu tek düğmeyle kapatabilirsin. Tercihin sonraki açılışlarda korunur; tek düğmeyle yeniden açabilirsin. Kapatmak bilgisayarındaki hesapları/geçmişi veya bulut önbelleğini silmez. Genel öneriler, kütüphane ve yerel kayıtlar kullanılabilir.
 
-Ortak Riot anahtarı Cloudflare hizmetinde gizli tutulur; uygulamaya ve kullanıcılara verilmez. Riot parolan istenmez. İstersen **Gelişmiş → Kendi Riot anahtarını kullan** seçeneği de vardır. Ayrıntılı veri akışı [gizlilik açıklamasındadır](docs/legal/PRIVACY.md).
+Ortak Riot anahtarı Cloudflare hizmetinde gizli tutulur; uygulamaya ve kullanıcılara verilmez. Riot parolan istenmez. İstersen **Ayarlar → Gelişmiş → Kendi Riot anahtarını kullan** seçeneği de vardır. Ayrıntılı veri akışı [gizlilik açıklamasındadır](docs/legal/PRIVACY.md).
 
 ## Güncellemeler ve verilerin
 
-- **Uygulama kendini günceller.** 0.1.2 ve sonrasında Keel açılışta yeni sürümü arka planda kontrol eder, doğrular ve otomatik indirir. Kurulumu oyun, şampiyon seçimi ve veri işlemleri bittikten sonra yapar; ardından yeniden açılır.
+- **Uygulama kendini günceller.** 0.1.2 ve sonrasında Keel açılışta yeni sürümü arka planda kontrol eder ve doğrular. Otomatik indirme Ayarlar’dan açılıp kapatılabilir. Kurulumu oyun, şampiyon seçimi ve veri işlemleri bittikten sonra yapar; ardından yeniden açılır.
 
 - **Maç geçmişin korunur.** Kişisel havuzun, maç kayıtların ve ayarların program dosyalarından ayrı, kendi bilgisayarında tutulur. Yeni sürüm kurulurken silinmez.
 
@@ -148,3 +154,4 @@ Keel geliştirme aşamasındadır. Öneriler mevcut veriye dayanır; kazanma gar
 Bu depo uygulama tanıtımını ve Windows kurulumlarını içerir. Kişisel veriler, Riot anahtarları ve ham maç arşivi yayımlanmaz.
 
 Keel, Riot Games tarafından desteklenmez veya onaylanmaz. League of Legends ve ilgili oyun görselleri Riot Games’e aittir.
+
