@@ -38,7 +38,7 @@ Maç geçmişi; şampiyonunu, koridor rakibini, skorunu, rünlerini ve eşyalar�
 
 *İki maç da temsili verilerle hazırlanmıştır; gerçek bir hesabın geçmişi değildir. 8,9 ve 3,4 puanları, örnek istatistiklerden uygulamanın mevcut yerel yöntemiyle hesaplanmıştır. Puanlar oyun içindeki her kararı ölçmez.*
 
-**Keel kapalıyken oynadığın maçlar da getirilebilir.** Geçmişi yenile düğmesi son 20 maçı getirir; daha eski maçlar 20’şer, son 200 maç kapsamında yüklenebilir. Onaylanmış bulut erişimi veya gelişmiş ayarlardaki kendi Riot anahtarın gerekir. Ayrıntılı yerel rapor ek AI kotası kullanmaz. İsteğe bağlı **AI yorumları** bulutta hazırlanır ve günlük kota kullanır; karttaki yerel maç puanından ayrıdır.
+**Keel kapalıyken oynadığın maçlar da getirilebilir.** Geçmişi yenile düğmesi son 20 maçı getirir; daha eski maçlar 20’şer, son 200 maç kapsamında yüklenebilir. Bulut bağlantısını veya gelişmiş ayarlardaki kendi Riot anahtarını kullanabilirsin. Ayrıntılı yerel rapor ek AI kotası kullanmaz. İsteğe bağlı **AI yorumları** bulutta hazırlanır ve günlük kota kullanır; karttaki yerel maç puanından ayrıdır.
 
 | Bölüm | Ne işe yarar? |
 |---|---|
@@ -101,7 +101,7 @@ Başlamak için Riot anahtarı eklemen, Python kurman veya komut satırı kullan
 
 ## Hesap ekleme ve bulut bağlantısı
 
-**Kendi Riot API anahtarını alman gerekmez.** Keel, ilk açılışta kapalı test bağlantısını otomatik hazırlar; adres veya kod yazmazsın. Yeni bir test kurulumu, yönetici onayından sonra veri hizmetine erişebilir. Bu hizmet herkese açık, sınırsız erişim sunmaz; günlük kotalar geçerlidir.
+**Kendi Riot API anahtarını alman gerekmez.** Keel, ilk açılışta bulut bağlantısını otomatik kurar. Adres, davet kodu veya yönetici onayı gerekmez. Günlük kullanım kotaları geçerlidir. Bulut bağlantısını Ayarlar’dan kapatabilirsin.
 
 **Hesabım → Hesap ekle** üzerinden Riot ID ve sunucunu seç. League açıksa oyun adını bulabiliriz; sunucunu ayrıca kontrol et. Birden fazla hesap saklayabilirsin. League'de kayıtlı hesabını açınca Keel ona geçer, kayıtlı havuzunu gösterir ve eksik/eski havuzu gerektiğinde arka planda yeniler. İlk ekleme bildirimi kısa süre görünür.
 
