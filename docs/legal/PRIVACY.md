@@ -6,21 +6,21 @@ Bu sayfa, uygulamanın hangi veriyi nerede kullandığını açıklar. **Tamamla
 ## Kısaca: veriler geliştiriciye mi gönderiliyor?
 Keel, bilgisayarındaki kişisel maç arşivini geliştiriciye e-posta, Discord mesajı veya otomatik bir kullanıcı raporu olarak göndermez. Yerel maç kayıtları ve ayrıntılı analiz bilgisayarında tutulur. Destek için kendin gönderdiğin mesaj, ekran görüntüsü veya dosyalar ise seçtiğin iletişim kanalından geliştiriciye ulaşır.
 
-**Bu, uygulamanın hiç veri işlemediği veya bulutta hiç kayıt bulunmadığı anlamına gelmez.** Davetli bulut bağlantısını kullandığında hesap/maç sorguları Keel'in Cloudflare üzerinde işlettiği hizmetten geçer; isteğe bağlı AI yorumu için seçilmiş oyun istatistikleri hizmete iletilir. Kota/davet kayıtları ve AI sonuç önbelleği aşağıda açıklanan biçimde saklanır. Bu hizmetin yönetimi geliştiricidedir; hizmetteki kayıtların geliştiricinin erişemeyeceği kayıtlar olduğu iddia edilmez. Otomatik bir raporun geliştiricinin bilgisayarına gelmemesi ile bulutta veri işlenmesi farklı durumlardır.
+**Bu, uygulamanın hiç veri işlemediği veya bulutta hiç kayıt bulunmadığı anlamına gelmez.** Bulut bağlantısını kullandığında hesap/maç sorguları Keel'in Cloudflare üzerinde işlettiği hizmetten geçer; isteğe bağlı AI yorumu için seçilmiş oyun istatistikleri hizmete iletilir. Kota/davet kayıtları ve AI sonuç önbelleği aşağıda açıklanan biçimde saklanır. Bu hizmetin yönetimi geliştiricidedir; hizmetteki kayıtların geliştiricinin erişemeyeceği kayıtlar olduğu iddia edilmez. Otomatik bir raporun geliştiricinin bilgisayarına gelmemesi ile bulutta veri işlenmesi farklı durumlardır.
 
 ## Hangi veri nereye gider?
 | İşlem | Bilgisayarında kalanlar | Hizmete iletilen / hizmette işlenenler |
 |---|---|---|
-| Hesap ve ayarlar | Riot ID, sunucu, hesap/maç kimlikleri, kişisel havuz ve tercihler yerel kayıtlarda tutulur. Kendi Riot API anahtarın ve bulut davet kodun da yerel ayar dosyalarında saklanır. | Kendi Riot anahtarını kullanırken hesap/maç sorguları Riot'a gider. Davetli bulut bağlantısında sorgular Cloudflare Workers üzerinden Riot'a iletilir. |
+| Hesap ve ayarlar | Riot ID, sunucu, hesap/maç kimlikleri, kişisel havuz ve tercihler yerel kayıtlarda tutulur. Kendi Riot API anahtarın ve varsa davet kodun veya otomatik kurulum kodun da yerel ayar dosyalarında saklanır. | Kendi Riot anahtarını kullanırken hesap/maç sorguları Riot'a gider. Bulut bağlantısında sorgular Cloudflare Workers üzerinden Riot'a iletilir. |
 | Maç geçmişi | İndirilen Riot maç yanıtları, maç kimlikleri, geçmiş listesi ve eşleşen yerel kayıtlar bilgisayarında saklanır. | Bulut kullanılırsa Riot ID, PUUID, maç kimliği, bölge ve gereken sorgu parametreleri hizmet tarafından işlenir. Riot yanıtları maçtaki diğer katılımcıların kimlik ve istatistiklerini de içerebilir. |
 | Yerel canlı kayıt ve ayrıntılı analiz | Keel açıkken gözlenen skor, minyon, görüş, eşya ve zaman kayıtları ile yerel analiz bilgisayarında tutulur. | Yerel ayrıntılı raporu açmak, bu kayıtları AI modeline gönderen bir işlem değildir. |
 | İsteğe bağlı AI yorumu | Dönen değerlendirme, ilgili yerel maç kaydıyla önbelleğe alınır. Eski AI yanıtlarının puan alanları da saklanabilir; bunlar güncel karttaki yerel maç puanı değildir. | Şampiyon, rol, mod, süre, sonuç, skor, hasar, altın, minyon, görüş, totem ve skora katkı gibi izinli istatistikler Cloudflare'deki değerlendirme hizmetine gönderilir. Model Cloudflare Workers AI üzerinden çalışır. |
 | Güncellemeler ve ortak oyun verileri | İndirilen güncelleme ve ortak veriler yerelde saklanır. | GitHub ve oyun verisi sağlayıcılarına indirme istekleri yapılır. Bu indirme isteklerinin gövdesine kişisel maç arşivi veya Riot anahtarı eklenmez. |
 
-Riot hesabının parolası istenmez. Ortak bulut Riot anahtarı Cloudflare secret olarak hizmette tutulur; masaüstü kurulumuna ve bu depoya eklenmez. Davet kodu, bulut isteklerinde HTTPS üzerinden yetkilendirme için kullanılır.
+Riot hesabının parolası istenmez. Ortak bulut Riot anahtarı Cloudflare secret olarak hizmette tutulur; masaüstü kurulumuna ve bu depoya eklenmez. Kurulum veya davet kodu, bulut isteklerinde HTTPS üzerinden yetkilendirme için kullanılır.
 
 ## AI modeline ne gönderilmez?
-Değerlendirme girişinde oyuncu adı/Riot ID, PUUID, maç kimliği, Riot API anahtarı ve davet kodu modelin istemine eklenmez. Bulut hizmeti daveti doğrular; model yalnızca izinli oyun istatistikleriyle değerlendirme yapar. Bunları **doğrudan hesap kimliği çıkarılmış istatistikler** olarak tanımlıyoruz; hiçbir koşulda yeniden ilişkilendirilemeyecekleri iddia edilmiyor.
+Değerlendirme girişinde oyuncu adı/Riot ID, PUUID, maç kimliği, Riot API anahtarı ve davet kodu modelin istemine eklenmez. Bulut hizmeti bağlantı yetkisini doğrular; model yalnızca izinli oyun istatistikleriyle değerlendirme yapar. Bunları **doğrudan hesap kimliği çıkarılmış istatistikler** olarak tanımlıyoruz; hiçbir koşulda yeniden ilişkilendirilemeyecekleri iddia edilmiyor.
 
 Destek değerlendirmesinde minyon ve altın; ARAM değerlendirmesinde görüş/totem ölçütleri modele verilen özelliklerden çıkarılır. Karttaki maç puanı ve ayrıntılı rapor bilgisayarında hazırlanır; bunları açmak model çağrısı yapmaz. İsteğe bağlı bulut AI yorumu ayrı bir özelliktir.
 
@@ -33,7 +33,7 @@ Destek değerlendirmesinde minyon ve altın; ARAM değerlendirmesinde görüş/t
 - **Günlükler:** İncelenen Cloudflare yapılandırmasında uygulama gözlemlenebilirlik günlükleri kapalıdır. Yerel LCU istek günlüğü uç nokta, zaman, sonuç ve süre bilgisi içindir; kimlik doğrulama başlıkları veya yanıt gövdeleri için değildir. Bu açıklama, hizmet sağlayıcıların tüm ağ/operasyon kayıtlarının sıfır olduğu iddiasını içermez.
 
 ## Erişim ve güvenliğin sınırları
-Yerel kayıtlar, kendi Riot API anahtarını eklediysen anahtarın ve bulut davet kodun yerel dosyalarda tutulur. İncelenen sürüm bu ayar dosyaları için uygulamaya özel bir şifreli kasa kullanmaz. Bilgisayarına veya kullanıcı dosyalarına erişebilen kişiler/yazılımlar bu verilere de erişebilir; hesaplara göre yerel ayırma, bilgisayar yöneticisine karşı şifreleme anlamına gelmez.
+Yerel kayıtlar, kendi Riot API anahtarını eklediysen anahtarın ve varsa bulut kurulum veya davet kodun yerel dosyalarda tutulur. İncelenen sürüm bu ayar dosyaları için uygulamaya özel bir şifreli kasa kullanmaz. Bilgisayarına veya kullanıcı dosyalarına erişebilen kişiler/yazılımlar bu verilere de erişebilir; hesaplara göre yerel ayırma, bilgisayar yöneticisine karşı şifreleme anlamına gelmez.
 
 Bulut hizmetinin yönetim yetkisi geliştiricidedir; Cloudflare de hizmet sağlayıcı olarak verileri işler. Yalnızca senin erişebileceğin, geliştiricinin veya hizmet sağlayıcının erişmesinin teknik olarak imkânsız olduğu bir sistem taahhüt etmiyoruz. HTTPS, bağlantı sırasında iletimi korumak içindir; yerel dosyaları veya bulutta saklanan sonuçları yalnızca kullanıcının çözebileceği uçtan uca şifreleme iddiası değildir.
 
@@ -60,10 +60,10 @@ Bu kanallardan gönderdiğin mesajlar, ekler ve iletişim bilgilerin başvurunu 
 [KVKK'nın aydınlatma yükümlülüğü açıklaması](https://www.kvkk.gov.tr/Icerik/2033/Aydinlatma-Yukumlulugu-) doğrultusunda gerekli kimlik, iletişim, amaç, hukuki sebep, alıcı grupları ve haklar bilgisi ilgili kullanıcılara veri elde edilirken ayrıca sunulmalıdır.
 
 
-## Otomatik kapalı test bağlantısı
-Bu bölüm, 0.1.15 masaüstü sürümündeki otomatik test erişimini ve bulut kayıt akışını açıklar. İlk açılışta rastgele bir kurulum kodu oluşturulur, bilgisayardaki bağlantı ayarına kaydedilir ve HTTPS üzerinden erişim isteğinde kullanılır. Bu kod Riot hesabının parolası veya ortak Riot API anahtarı değildir. Bulut kodun SHA-256 özetiyle kurulum isteğini, oluşturulma zamanını ve test erişimi durumunu saklar. Onaylanmış kayıtlarda bitiş zamanı ve kota da vardır. Yeni cihaz, test yöneticisinin onayı olmadan Riot/AI verilerine erişemez; mevcut kayıtlı davetler korunur.
+## Otomatik bulut bağlantısı
+Keel ilk açılışta rastgele bir kurulum kodu üretir, bilgisayardaki bağlantı ayarına kaydeder ve HTTPS üzerinden erişim isteğinde kullanır. Bulut, bu kodun SHA-256 özetini, kurulumun oluşturulma zamanını, erişim durumunu, izin bitişini ve kotasını saklar. Erişim otomatik etkinleşir. Önceden verilen davetler geçerlilik süreleri boyunca kullanılabilir.
 
-Bekleyen isteklerin 7 günlük geçerlilik kontrolü vardır; temizlik gelen isteklerle yapılır ve tam 7. günde fiziksel silme garantisi değildir. Onaylı/iptal edilmiş kurulum kayıtları için genel bir otomatik silme süresi yoktur. Kayıt deposu toplam 100 kayıtla sınırlıdır. Yönetici kurulumların özet kimliklerini ve erişim durumlarını görebilir; otomatik cihazlar için en fazla 5 aktif onay ve 30 günlük izin uygulanır. İletişim için kendin bilgi paylaşmadığın sürece rastgele kurulum kodu kendi başına adın/e-posta adresin değildir; bunun tüm hizmeti anonim kıldığı iddia edilmez.
+Otomatik izin 30 gün geçerlidir ve süresi dolduğunda bir sonraki bağlantı kontrolünde otomatik yenilenir. Yeni izin oluşturulurken süresi dolmuş otomatik kayıtlar temizlenir. İptal kayıtları yeniden etkinleşmeyi önlemek için saklanır. Kurulum kayıtlarına ve günlük yeni izinlere kapasite sınırı uygulanır. Yönetici, kurulumların özet kimliğini ve erişim durumunu görebilir.
 
 Hesabım bölümünden tek düğmeyle bulut bağlantısını kesebilirsin. Tercih sonraki açılışlarda korunur. Yerel bağlantı kodu yeniden açabilmen için dosyada tutulur; bağlantıyı kapatmak kurulum kaydını, maç geçmişini veya kalıcı AI önbelleğini silmez. Yeniden açıldığında aynı kurulum kodu kullanılır. Genel yerel özellikler bulut kapalıyken çalışmaya devam eder. Başvuru iletişimi yukarıdaki Discord ve e-posta kanallarıdır.
 
