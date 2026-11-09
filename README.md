@@ -58,7 +58,7 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 
 </details>
 
-> **1.2.0:** Oyun aşaması analizi, kişisel eşleşme notları ve gelişim görevleri. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v1.2.0).
+> **Keel 1.2.4** · Tek hazırlık paneli, role göre şampiyon önerileri ve 1.500 yeni dereceli maç. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v1.2.4).
 
 ## Günlük görevler ve görünüm
 
