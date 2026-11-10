@@ -58,7 +58,7 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 
 </details>
 
-> **Keel 1.2.4** · Tek hazırlık paneli, role göre şampiyon önerileri ve 1.500 yeni dereceli maç. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v1.2.4).
+> **Keel 1.2.5** · 16.22’de 20.000 dereceli maç, 12 ban önerisi ve rakibe göre dizilimler. [Sürüm notları](https://github.com/kjtasan/keel-lol/releases/tag/v1.2.5).
 
 ## Günlük görevler ve görünüm
 
@@ -79,18 +79,18 @@ Eşya, rün ve sihirdar büyüsü adlarında oyundaki Türkçe karşılıklar ku
 Keel'in Windows yayıncı sertifikası henüz yoktur; bu yüzden SmartScreen uygulamayı tanımadığına dair uyarı gösterebilir. [Microsoft'un SmartScreen açıklaması](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
 
 <details>
-<summary><strong>1.2.0 kurucusunun SHA-256 değerini denetle</strong></summary>
+<summary><strong>1.2.5 kurucusunun SHA-256 değerini denetle</strong></summary>
 
-Dosya: `Keel-Setup-1.2.0.exe`
+Dosya: `Keel-Setup-1.2.5.exe`
 
 ```text
-482bfc2c156cf0e5f6d313461cf7ed9c578a64992878169965b9f0561dbccc40
+d6b8c43a70df1e197eb2c21f5220394ecdab52d670e9923876b7b0472e6b60ba
 ```
 
 PowerShell'de kurucunun bulunduğu klasörden:
 
 ```powershell
-Get-FileHash .\Keel-Setup-1.2.0.exe -Algorithm SHA256
+Get-FileHash .\Keel-Setup-1.2.5.exe -Algorithm SHA256
 ```
 
 Çıktıdaki özet yukarıdakiyle eşleşmelidir. Diğer sürümlerde o sürümün notlarındaki değeri veya `SHA256SUMS.txt` dosyasını kullan. Özet kontrolü, dosyanın yayımlanan kopyayla aynı olduğunu gösterir; Windows yayıncı imzasının yerine geçmez.
@@ -145,7 +145,7 @@ Destek, gizlilik ve kullanım izni soruları için **Discord: `kjtasan`** (özel
 
 ## Son sürümün kapsamı
 
-Keel 1.2, seçimdeki oyun aşaması tahminlerini maç sonunda gerçek altın farkıyla karşılaştırır. Aynı rakibe karşı önceki maçını ve kişisel notunu seçim ekranında görebilir, Şampiyonlarım’da tekrarlayan alışkanlıklarını inceleyebilirsin. Ortak arşiv 14.221 maç içerir. [Sürümler](https://github.com/kjtasan/keel-lol/releases).
+Keel 1.2, seçimdeki oyun aşaması tahminlerini maç sonunda gerçek altın farkıyla karşılaştırır. Aynı rakibe karşı önceki maçını ve kişisel notunu seçim ekranında görebilir, Şampiyonlarım’da tekrarlayan alışkanlıklarını inceleyebilirsin. Ortak arşivde 16.22’den 20.000 ve 16.21’den 11.433 dereceli maç var. [Sürümler](https://github.com/kjtasan/keel-lol/releases).
 
 ---
 
